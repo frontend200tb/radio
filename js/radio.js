@@ -15,85 +15,141 @@ const radioSite = document.getElementById('radio__site');
 
 /*Создадим объекты для радиостанций*/
 
-/*Сохраним в объекте данные Prvi Radio Novi Sad Srbija*/
-const srbPrvinsad = {
-    title: "Prvi Radio Novi Sad",
-    stream: "https://mastermedia.shoutca.st/proxy/prviradions?mp=/stream",
-    logo: "img/radio/prvi-radio-novi-sad-100x100.png",
-    site: "https://prviradio.rs/radiochannel/prvi-radio-novi-sad/",
-    id: "stanicaPrvinsad",
-    btnid: "srb_prvinsad"
+const dataSrbijaPrviNovisad = {
+  title: "Prvi Radio Novi Sad Srbija",
+  stream: "https://mastermedia.shoutca.st/proxy/prviradions?mp=/stream",
+  logo: "img/radio/prvi-radio-novi-sad-100x100.png",
+  site: "https://prviradio.rs/radiochannel/prvi-radio-novi-sad/",
+  id: "stanicaPrvinsad",
+  btnid: "srb_prvinsad"
 }
 
-/*Сохраним в объекте данные Prvi Radio Subotica Srbija*/
-const srbPrvisubo = {
-    title: "Prvi Radio Subotica",
-    stream: "https://mastermedia.shoutca.st/proxy/prviradiosu?mp=/stream",
-    logo: "img/radio/prvi-radio-subotica-100x100.png",
-    site: "https://prviradio.rs/radiochannel/prvi-radio-subotica/",
-    id: "stanicaPrvisubo",
-    btnid: "srb_prvisubo"
+const dataSrbijaPrviSubotica = {
+  title: "Prvi Radio Subotica Srbija",
+  stream: "https://mastermedia.shoutca.st/proxy/prviradiosu?mp=/stream",
+  logo: "img/radio/prvi-radio-subotica-100x100.png",
+  site: "https://prviradio.rs/radiochannel/prvi-radio-subotica/",
+  id: "stanicaPrvisubo",
+  btnid: "srb_prvisubo"
 }
 
-/*Сохраним в объекте данные Prvi Radio Užice Srbija*/
-const srbPrviuzice = {
-    title: "Prvi Radio Užice",
-    stream: "https://mastermedia.shoutca.st/proxy/prviradioue?mp=/stream",
-    logo: "img/radio/prvi-radio-uzice-100x100.png",
-    site: "https://prviradio.rs/radiochannel/prvi-radio-uzice/",
-    id: "stanicaPrviuzice",
-    btnid: "srb_prviuzice"
+const dataSrbijaPrviUzice = {
+  title: "Prvi Radio Užice Srbija",
+  stream: "https://mastermedia.shoutca.st/proxy/prviradioue?mp=/stream",
+  logo: "img/radio/prvi-radio-uzice-100x100.png",
+  site: "https://prviradio.rs/radiochannel/prvi-radio-uzice/",
+  id: "stanicaPrviuzice",
+  btnid: "srb_prviuzice"
 }
 
-/*Сохраним в объекте данные Prvi Radio Kafanica Srbija*/
-const srbPrvikafa = {
-    title: "Prvi Radio Kafanica",
-    stream: "https://mastermedia.shoutca.st/proxy/prvikafanica?mp=/stream",
-    logo: "img/radio/prvi-kafanica-100x100.png",
-    site: "https://prviradio.rs/radiochannel/kafanica/",
-    id: "stanicaPrvikafa",
-    btnid: "srb_prvikafa"
+const dataSrbijaPrviKafanica = {
+  title: "Prvi Radio Kafanica Srbija",
+  stream: "https://mastermedia.shoutca.st/proxy/prvikafanica?mp=/stream",
+  logo: "img/radio/prvi-kafanica-100x100.png",
+  site: "https://prviradio.rs/radiochannel/kafanica/",
+  id: "stanicaPrvikafa",
+  btnid: "srb_prvikafa"
 }
 
-/*Сохраним в объекте данные Prvi Radio 90-te Srbija*/
-const srbPrvi90 = {
-    title: "Prvi Radio 90-te",
-    stream: "https://mastermedia.shoutca.st/proxy/prvi90te?mp=/stream",
-    logo: "img/radio/prvi-90te-100x100.png",
-    site: "https://prviradio.rs/radiochannel/90-te/",
-    id: "stanicaPrvi90",
-    btnid: "srb_prvi90"
+const dataSrbijaPrvi90 = {
+  title: "Prvi Radio 90-te Srbija",
+  stream: "https://mastermedia.shoutca.st/proxy/prvi90te?mp=/stream",
+  logo: "img/radio/prvi-90te-100x100.png",
+  site: "https://prviradio.rs/radiochannel/90-te/",
+  id: "stanicaPrvi90",
+  btnid: "srb_prvi90"
 }
 
-/*Сохраним в объекте данные Prvi Radio Cafe Srbija*/
-const srbPrvicafe = {
-    title: "Prvi Radio Cafe",
-    stream: "https://mastermedia.shoutca.st/proxy/prvicafe?mp=/stream",
-    logo: "img/radio/prvi-cafe-100x100.png",
-    site: "https://prviradio.rs/radiochannel/cafe/",
-    id: "stanicaPrvicafe",
-    btnid: "srb_prvicafe"
+const dataSrbijaPrviCafe = {
+  title: "Prvi Radio Cafe Srbija",
+  stream: "https://mastermedia.shoutca.st/proxy/prvicafe?mp=/stream",
+  logo: "img/radio/prvi-cafe-100x100.png",
+  site: "https://prviradio.rs/radiochannel/cafe/",
+  id: "stanicaPrvicafe",
+  btnid: "srb_prvicafe"
 }
 
-/*Сохраним в объекте данные Prvi Radio Trending Srbija*/
-const srbPrvitren = {
-    title: "Prvi Radio Trending",
-    stream: "https://mastermedia.shoutca.st/proxy/prvitrending?mp=/stream",
-    logo: "img/radio/prvi-trending-100x100.png",
-    site: "https://prviradio.rs/radiochannel/trending/",
-    id: "stanicaPrvitren",
-    btnid: "srb_prvitren"
+const dataSrbijaPrviTrending = {
+  title: "Prvi Radio Trending Srbija",
+  stream: "https://mastermedia.shoutca.st/proxy/prvitrending?mp=/stream",
+  logo: "img/radio/prvi-trending-100x100.png",
+  site: "https://prviradio.rs/radiochannel/trending/",
+  id: "stanicaPrvitren",
+  btnid: "srb_prvitren"
 }
 
-/*Сохраним в объекте данные Prvi Radio YU kolekcija Srbija*/
-const srbPrviyu = {
-    title: "Prvi Radio YU kolekcija",
-    stream: "https://mastermedia.shoutca.st/proxy/prviyukolekcija?mp=/stream",
-    logo: "img/radio/prvi-yu-100x100.png",
-    site: "https://prviradio.rs/radiochannel/yu/",
-    id: "stanicaPrviyu",
-    btnid: "srb_prviyu"
+const dataSrbijaPrviYu = {
+  title: "Prvi Radio YU kolekcija Srbija",
+  stream: "https://mastermedia.shoutca.st/proxy/prviyukolekcija?mp=/stream",
+  logo: "img/radio/prvi-yu-100x100.png",
+  site: "https://prviradio.rs/radiochannel/yu/",
+  id: "stanicaPrviyu",
+  btnid: "srb_prviyu"
 }
+
+const dataHrvatskaDalmacijaSplit = {
+  title: "Radio Dalmacija Split Hrvatska",
+  stream: "http://shoutcast.pondi.hr:8000/;",
+  logo: "img/radio/dalmacija-live.png",
+  site: "https://www.radiodalmacija.hr/",
+  id: "stanicaDalmsplit",
+  btnid: "hrv_dalmsplit"
+}
+
+const dataHrvatskaDalmacijaOliver = {
+  title: "Radio Dalmacija Oliver Hrvatska",
+  stream: "http://c5.hostingcentar.com:8275/stream",
+  logo: "img/radio/dalmacija-live.png",
+  site: "https://www.radiodalmacija.hr/",
+  id: "stanicaDalmoliver",
+  btnid: "hrv_dalmoliver"
+}
+
+const dataHrvatskaDalmacijaRokija = {
+  title: "Radio Dalmacija Rokija Hrvatska",
+  stream: "http://c5.hostingcentar.com:8209/stream",
+  logo: "img/radio/dalmacija-live.png",
+  site: "https://www.radiodalmacija.hr/",
+  id: "stanicaDalmrokija",
+  btnid: "hrv_dalmrokija"
+}
+
+const dataHrvatskaDalmacijaFjaka = {
+  title: "Radio Dalmacija Fjaka Hrvatska",
+  stream: "http://c5.hostingcentar.com:8203/stream",
+  logo: "img/radio/dalmacija-live.png",
+  site: "https://www.radiodalmacija.hr/",
+  id: "stanicaDalmfjaka",
+  btnid: "hrv_dalmfjaka"
+}
+
+const dataHrvatskaDalmacijaFuresta = {
+  title: "Radio Dalmacija Furešta Hrvatska",
+  stream: "http://c5.hostingcentar.com:8215/stream",
+  logo: "img/radio/dalmacija-live.png",
+  site: "https://www.radiodalmacija.hr/",
+  id: "stanicaDalmfuresta",
+  btnid: "hrv_dalmfuresta"
+}
+
+const dataHrvatskaDalmacijaHajducke = {
+  title: "Radio Dalmacija Hajdučke Hrvatska",
+  stream: "http://c5.hostingcentar.com:8221/stream",
+  logo: "img/radio/dalmacija-live.png",
+  site: "https://www.radiodalmacija.hr/",
+  id: "stanicaDalmhajducke",
+  btnid: "hrv_dalmhajducke"
+}
+
+const dataHrvatskaDalmacijaPartymix = {
+  title: "Radio Dalmacija Party Mix Hrvatska",
+  stream: "http://c5.hostingcentar.com:8281/stream",
+  logo: "img/radio/dalmacija-live.png",
+  site: "https://www.radiodalmacija.hr/",
+  id: "stanicaDalmpartymix",
+  btnid: "hrv_dalmpartymix"
+}
+
 
 
 /*Сохраним в объекте данные Radio Puls Grocka Srbija*/
@@ -218,21 +274,35 @@ const setRadio = (station) => {
 
 /*Добавим обработчики нажатия на button Listen live */
 
-srb_prvinsad.addEventListener('click', () => setRadio(srbPrvinsad));
+srb_prvinsad.addEventListener('click', () => setRadio(dataSrbijaPrviNovisad));
 
-srb_prvisubo.addEventListener('click', () => setRadio(srbPrvisubo));
+srb_prvisubo.addEventListener('click', () => setRadio(dataSrbijaPrviSubotica));
 
-srb_prviuzice.addEventListener('click', () => setRadio(srbPrviuzice));
+srb_prviuzice.addEventListener('click', () => setRadio(dataSrbijaPrviUzice));
 
-srb_prvikafa.addEventListener('click', () => setRadio(srbPrvikafa));
+srb_prvikafa.addEventListener('click', () => setRadio(dataSrbijaPrviKafanica));
 
-srb_prvi90.addEventListener('click', () => setRadio(srbPrvi90));
+srb_prvi90.addEventListener('click', () => setRadio(dataSrbijaPrvi90));
 
-srb_prvicafe.addEventListener('click', () => setRadio(srbPrvicafe));
+srb_prvicafe.addEventListener('click', () => setRadio(dataSrbijaPrviCafe));
 
-srb_prvitren.addEventListener('click', () => setRadio(srbPrvitren));
+srb_prvitren.addEventListener('click', () => setRadio(dataSrbijaPrviTrending));
 
-srb_prviyu.addEventListener('click', () => setRadio(srbPrviyu));
+srb_prviyu.addEventListener('click', () => setRadio(dataSrbijaPrviYu));
+
+hrv_dalmsplit.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaSplit));
+
+hrv_dalmoliver.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaOliver));
+
+hrv_dalmrokija.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaRokija));
+
+hrv_dalmfjaka.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaFjaka));
+
+hrv_dalmfuresta.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaFuresta));
+
+hrv_dalmhajducke.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaHajducke));
+
+hrv_dalmpartymix.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaPartymix));
 
 srb_puls.addEventListener('click', () => setRadio(srbPuls));
 
