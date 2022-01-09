@@ -17,7 +17,7 @@
       <header class="header container" id="header">
         <div class="header__first-row">
           
-          <img src="img/logo.png" alt="200Terabyte Web Studio logo">
+          <img class="header-logo" src="img/logo.png" alt="200Terabyte Web Studio logo">
           
         </div>
         <div class="header__second-row">
@@ -63,133 +63,158 @@
           <hr>
           <article class="select-radio">
             <h2>Select radio station</h2>
-            <ol>
-              <li>
-                <div class="stanica" id="stanicaPrvinsad">
-                  <button id="srb_prvinsad">Listen live</button><strong>Prvi Radio Novi Sad Srbija</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaPrvisubo">
-                  <button id="srb_prvisubo">Listen live</button><strong>Prvi Radio Subotica Srbija</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaPrviuzice">
-                  <button id="srb_prviuzice">Listen live</button><strong>Prvi Radio Užice Srbija</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaPrvikafa">
-                  <button id="srb_prvikafa">Listen live</button><strong>Prvi Radio Kafanica Srbija</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaPrvi90">
-                  <button id="srb_prvi90">Listen live</button><strong>Prvi Radio 90-te Srbija</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaPrvicafe">
-                  <button id="srb_prvicafe">Listen live</button><strong>Prvi Radio Cafe Srbija</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaPrvitren">
-                  <button id="srb_prvitren">Listen live</button><strong>Prvi Radio Trending Srbija</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaPrviyu">
-                  <button id="srb_prviyu">Listen live</button><strong>Prvi Radio YU kolekcija Srbija</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaDalmsplit">
-                  <button id="hrv_dalmsplit">Listen live</button><strong>Radio Dalmacija Split Hrvatska</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaDalmoliver">
-                  <button id="hrv_dalmoliver">Listen live</button><strong>Radio Dalmacija Oliver Hrvatska</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaDalmrokija">
-                  <button id="hrv_dalmrokija">Listen live</button><strong>Radio Dalmacija Rokija Hrvatska</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaDalmfjaka">
-                  <button id="hrv_dalmfjaka">Listen live</button><strong>Radio Dalmacija Fjaka Hrvatska</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaDalmfuresta">
-                  <button id="hrv_dalmfuresta">Listen live</button><strong>Radio Dalmacija Furešta Hrvatska</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaDalmhajducke">
-                  <button id="hrv_dalmhajducke">Listen live</button><strong>Radio Dalmacija Hajdučke Hrvatska</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaDalmpartymix">
-                  <button id="hrv_dalmpartymix">Listen live</button><strong>Radio Dalmacija Party Mix Hrvatska</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaPuls">
-                  <button id="srb_puls">Listen live</button><strong>Radio Puls Grocka</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanica012">
-                  <button id="srb_012">Listen live</button><strong>Radio 012 Požarevac</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaAparat">
-                  <button id="srb_aparat">Listen live</button><strong>Radio Aparat Beograd</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaAsfm">
-                  <button id="srb_asfm">Listen live</button><strong>Radio AS FM Novi Sad</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaLuna">
-                  <button id="srb_luna">Listen live</button><strong>Radio Luna Užice</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaSljivovica">
-                  <button id="srb_sljivovica">Listen live</button><strong>Radio Šljivovica Kaljevo</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaRts1">
-                  <button id="srb_rts1">Listen live</button><strong>Radio RTS Beograd 1</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaDigifm">
-                  <button id="rom_digifm">Listen live</button><strong>Radio DigiFM România</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanicaSputnjik">
-                  <button id="srb_sputnjik">Listen live</button><strong>Radio Sputnjik Srbija</strong>
-                </div>
-              </li>
-              <li>
-                <div class="stanica" id="stanica101">
-                  <button id="srb_101">Listen live</button><strong>Radio 101 Beograd</strong>
-                </div>
-              </li>
-            </ol>
+            <div class="content__menu">
+              <p class="content__menu-link" id="serbia-link">Srbija</p>
+              <p class="content__menu-link" id="croatia-link">Hrvatska</p>
+              <p class="content__menu-link" id="bih-link">BiH</p>
+            </div>
+            <div class="content__items">
+              <div id="content__items-serbia">
+                <h3>Srbija</h3>
+                <ol>
+                  <li>
+                    <div class="stanica" id="stanicaPrvinsad">
+                      <button id="srb_prvinsad">Listen live</button><strong>Prvi Radio Novi Sad Srbija</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaPrvisubo">
+                      <button id="srb_prvisubo">Listen live</button><strong>Prvi Radio Subotica Srbija</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaPrviuzice">
+                      <button id="srb_prviuzice">Listen live</button><strong>Prvi Radio Užice Srbija</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaPrvikafa">
+                      <button id="srb_prvikafa">Listen live</button><strong>Prvi Radio Kafanica Srbija</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaPrvi90">
+                      <button id="srb_prvi90">Listen live</button><strong>Prvi Radio 90-te Srbija</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaPrvicafe">
+                      <button id="srb_prvicafe">Listen live</button><strong>Prvi Radio Cafe Srbija</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaPrvitren">
+                      <button id="srb_prvitren">Listen live</button><strong>Prvi Radio Trending Srbija</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaPrviyu">
+                      <button id="srb_prviyu">Listen live</button><strong>Prvi Radio YU kolekcija Srbija</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaPuls">
+                      <button id="srb_puls">Listen live</button><strong>Radio Puls Grocka</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanica012">
+                      <button id="srb_012">Listen live</button><strong>Radio 012 Požarevac</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaAparat">
+                      <button id="srb_aparat">Listen live</button><strong>Radio Aparat Beograd</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaAsfm">
+                      <button id="srb_asfm">Listen live</button><strong>Radio AS FM Novi Sad</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaLuna">
+                      <button id="srb_luna">Listen live</button><strong>Radio Luna Užice</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaSljivovica">
+                      <button id="srb_sljivovica">Listen live</button><strong>Radio Šljivovica Kaljevo</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaRts1">
+                      <button id="srb_rts1">Listen live</button><strong>Radio RTS Beograd 1</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaDigifm">
+                      <button id="rom_digifm">Listen live</button><strong>Radio DigiFM România</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaSputnjik">
+                      <button id="srb_sputnjik">Listen live</button><strong>Radio Sputnjik Srbija</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanica101">
+                      <button id="srb_101">Listen live</button><strong>Radio 101 Beograd</strong>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+              <div id="content__items-croatia">
+                <h3>Hrvatska</h3>
+                <ol>
+                  <li>
+                    <div class="stanica" id="stanicaDalmsplit">
+                      <button id="hrv_dalmsplit">Listen live</button><strong>Radio Dalmacija Split Hrvatska</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaDalmoliver">
+                      <button id="hrv_dalmoliver">Listen live</button><strong>Radio Dalmacija Oliver Hrvatska</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaDalmrokija">
+                      <button id="hrv_dalmrokija">Listen live</button><strong>Radio Dalmacija Rokija Hrvatska</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaDalmfjaka">
+                      <button id="hrv_dalmfjaka">Listen live</button><strong>Radio Dalmacija Fjaka Hrvatska</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaDalmfuresta">
+                      <button id="hrv_dalmfuresta">Listen live</button><strong>Radio Dalmacija Furešta Hrvatska</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaDalmhajducke">
+                      <button id="hrv_dalmhajducke">Listen live</button><strong>Radio Dalmacija Hajdučke Hrvatska</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="stanica" id="stanicaDalmpartymix">
+                      <button id="hrv_dalmpartymix">Listen live</button><strong>Radio Dalmacija Party Mix Hrvatska</strong>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+              <div id="content__items-bih">
+                <h3>BiH</h3>
+                <ol>
+                  <li>
+                    <div class="stanica" id="stanicaSehara">
+                      <button id="bih_sehara">Listen live</button><strong>Radio Sehara Sarajevo BiH</strong>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
             <hr>
             <div class="up"><a href="#header">Up</a></div>
             <hr>
@@ -197,10 +222,11 @@
         </section>
       </main>
       <footer class="footer container">
-        <h2>Created in <a href="https://frontend200tb.github.io/start/">200TERABYTE Web Studio</a></h2>
+        <div class="footer-title">Created in <a href="https://frontend200tb.github.io/start/">200TERABYTE Web Studio</a></div>
       </footer>
     </div>
     <script src="js/player.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/radio.js"></script>
   </body>
 </html>
