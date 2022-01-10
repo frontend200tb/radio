@@ -202,7 +202,7 @@ const srb101 = {
 *****************/
 const dataHrvatskaDalmacijaSplit = {
   title: "Radio Dalmacija Split Hrvatska",
-  stream: "http://shoutcast.pondi.hr:8000/;",
+  stream: "http://shoutcast.pondi.hr:8000/",
   logo: "img/radio/dalmacija-live.png",
   site: "https://www.radiodalmacija.hr/",
   id: "stanicaDalmsplit",
