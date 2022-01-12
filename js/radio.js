@@ -198,82 +198,13 @@ const srb101 = {
 
 
 /*****************
-Хорватия
-*****************/
-const dataHrvatskaDalmacijaSplit = {
-  title: "Radio Dalmacija Split Hrvatska",
-  stream: "http://shoutcast.pondi.hr:8000/",
-  logo: "img/radio/dalmacija-live.png",
-  site: "https://www.radiodalmacija.hr/",
-  id: "stanicaDalmsplit",
-  btnid: "hrv_dalmsplit"
-}
-
-const dataHrvatskaDalmacijaOliver = {
-  title: "Radio Dalmacija Oliver Hrvatska",
-  stream: "http://c5.hostingcentar.com:8275/stream",
-  logo: "img/radio/dalmacija-live.png",
-  site: "https://www.radiodalmacija.hr/",
-  id: "stanicaDalmoliver",
-  btnid: "hrv_dalmoliver"
-}
-
-const dataHrvatskaDalmacijaRokija = {
-  title: "Radio Dalmacija Rokija Hrvatska",
-  stream: "http://c5.hostingcentar.com:8209/stream",
-  logo: "img/radio/dalmacija-live.png",
-  site: "https://www.radiodalmacija.hr/",
-  id: "stanicaDalmrokija",
-  btnid: "hrv_dalmrokija"
-}
-
-const dataHrvatskaDalmacijaFjaka = {
-  title: "Radio Dalmacija Fjaka Hrvatska",
-  stream: "http://c5.hostingcentar.com:8203/stream",
-  logo: "img/radio/dalmacija-live.png",
-  site: "https://www.radiodalmacija.hr/",
-  id: "stanicaDalmfjaka",
-  btnid: "hrv_dalmfjaka"
-}
-
-const dataHrvatskaDalmacijaFuresta = {
-  title: "Radio Dalmacija Furešta Hrvatska",
-  stream: "http://c5.hostingcentar.com:8215/stream",
-  logo: "img/radio/dalmacija-live.png",
-  site: "https://www.radiodalmacija.hr/",
-  id: "stanicaDalmfuresta",
-  btnid: "hrv_dalmfuresta"
-}
-
-const dataHrvatskaDalmacijaHajducke = {
-  title: "Radio Dalmacija Hajdučke Hrvatska",
-  stream: "http://c5.hostingcentar.com:8221/stream",
-  logo: "img/radio/dalmacija-live.png",
-  site: "https://www.radiodalmacija.hr/",
-  id: "stanicaDalmhajducke",
-  btnid: "hrv_dalmhajducke"
-}
-
-const dataHrvatskaDalmacijaPartymix = {
-  title: "Radio Dalmacija Party Mix Hrvatska",
-  stream: "http://c5.hostingcentar.com:8281/stream",
-  logo: "img/radio/dalmacija-live.png",
-  site: "https://www.radiodalmacija.hr/",
-  id: "stanicaDalmpartymix",
-  btnid: "hrv_dalmpartymix"
-}
-
-
-
-
-/*****************
 Босния
 *****************/
 const dataBihSehara = {
   title: "Radio Sehara Sarajevo",
-  stream: "http://radio.radiosehara.net:9320/;*.mp3",
+  stream: "http://radio.radiosehara.net:9320/\;*.mp3",
   logo: "img/radio/radio-bih-sehara.jpg",
-  site: "https://prviradio.rs/radiochannel/prvi-radio-novi-sad/",
+  site: "https://radiosehara.net/",
   id: "stanicaSehara",
   btnid: "bih_sehara"
 }
@@ -336,22 +267,6 @@ srb_sputnjik.addEventListener('click', () => setRadio(srbSputnjik));
 srb_101.addEventListener('click', () => setRadio(srb101));
 
 
-/*****************
-Хорватия
-*****************/
-hrv_dalmsplit.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaSplit));
-
-hrv_dalmoliver.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaOliver));
-
-hrv_dalmrokija.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaRokija));
-
-hrv_dalmfjaka.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaFjaka));
-
-hrv_dalmfuresta.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaFuresta));
-
-hrv_dalmhajducke.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaHajducke));
-
-hrv_dalmpartymix.addEventListener('click', () => setRadio(dataHrvatskaDalmacijaPartymix));
 
 
 /*****************
