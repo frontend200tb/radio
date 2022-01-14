@@ -8,8 +8,10 @@ main.content
 
 /*Основная функция убирает class order -1 у старого элемента и добавляет новому*/
 function addOrder(item){
+    console.log(item);
     old.classList.remove('content__order');
     item.classList.add('content__order');
+    console.log(item);
     old = item;
 }
 /*Основная функция убирает class order -1 у старого элемента и добавляет новому*/
@@ -19,7 +21,7 @@ function addOrder(item){
 
 if (document.getElementById('content__menu-link1') &&
     document.getElementById('content__item1')) {
-    var old = document.getElementById('content__item1');
+    var old = document.getElementById('content__menu-link1');
     const menu_link1 = document.getElementById('content__menu-link1');
     const item1 = document.getElementById('content__item1');
     menu_link1.addEventListener('click', () => addOrder(item1));
@@ -37,6 +39,13 @@ if (document.getElementById('content__menu-link3') &&
     const menu_link3 = document.getElementById('content__menu-link3');
     const item3 = document.getElementById('content__item3');
     menu_link3.addEventListener('click', () => addOrder(item3));
+}
+
+if (document.getElementById('content__menu-link4') &&
+    document.getElementById('content__item4')) {
+    const menu_link4 = document.getElementById('content__menu-link4');
+    const item4 = document.getElementById('content__item4');
+    menu_link4.addEventListener('click', () => addOrder(item4));
 }
 
 /*************Content*/
