@@ -48,4 +48,18 @@ if (document.getElementById('content__menu-link4') &&
     menu_link4.addEventListener('click', () => addOrder(item4));
 }
 
+if (document.getElementById('content__menu-link5') &&
+    document.getElementById('content__item5')) {
+    const menu_link5 = document.getElementById('content__menu-link5');
+    const item5 = document.getElementById('content__item5');
+    menu_link5.addEventListener('click', () => addOrder(item5));
+}
+
+if (document.getElementById('content__menu-link6') &&
+    document.getElementById('content__item6')) {
+    const menu_link6 = document.getElementById('content__menu-link6');
+    const item6 = document.getElementById('content__item6');
+    menu_link6.addEventListener('click', () => addOrder(item6));
+}
+
 /*************Content*/

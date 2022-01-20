@@ -1,6 +1,14 @@
 :root {
   --bg: #87ceeb;
   --bor: #00aced;
+  --bg-dark1: #111;
+  --txt-dark1:#f4f4f4;
+  --bg-dark2: #373737;
+  --txt-dark2: #f4f4f4;
+  --bg-light1: #f4f4f4;
+  --txt-light1: #111;
+  --bg-light2: #4a76a8;
+  --txt-light2: #f4f4f4;
 }
 
 * {
@@ -27,6 +35,10 @@ body {
 
 @media (max-width: 576px) {
   .page {
+    font-size: 0.8rem;
+  }
+
+  .listen-btn {
     font-size: 0.8rem;
   }
 }
@@ -303,16 +315,9 @@ body {
   gap: 30px;
 }
 
-.left {
+.main__section {
   padding: 10px;
-  min-width: 450px;
-  border: 5px solid var(--bor);
-  border-radius: 10px;
-}
-
-.right {
-  padding: 10px;
-  min-width: 450px;
+  min-width: 400px;
   border: 5px solid var(--bor);
   border-radius: 10px;
 }
@@ -326,17 +331,19 @@ body {
   vertical-align: top;
 }
 
-.listen-btn {
+.stanica {
   margin: 10px;
-  font-size: 1.2rem;
+  padding: 10px;
+  font-size: 1rem;
+  color: var(--txt-light1);
   border: 5px solid var(--bor);
   border-radius: 10px;
-  background-color: antiquewhite;
+  background-color: var(--bg-light1);
+  cursor: pointer;
 }
 
-.listen-btn:hover {
-  cursor: pointer;
-  background-color: #fff;
+.stanica:hover {
+  background-color: var(--bg-light2);
 }
 
 .up {
@@ -358,12 +365,12 @@ body {
   padding: 10px;
   border: 5px solid var(--bor);
   border-radius: 10px;
-  background-color: antiquewhite;
+  background-color: var(--bg-light1);
+  cursor: pointer;
 }
 
 .content__menu-link:hover {
-  cursor: pointer;
-  background-color: #fff;
+  background-color: var(--bg-light2);
 }
 
 .content__items {
@@ -380,6 +387,10 @@ body {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+}
+
+.country-title {
+  text-align: center;
 }
 
 .footer {
@@ -406,6 +417,13 @@ body {
 
 @media (max-width: 576px) {
   .footer {
-    width: 90%;
+    padding: 0;
+  }
+
+  .footer-title {
+    padding: 0;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
