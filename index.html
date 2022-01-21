@@ -40,6 +40,7 @@
       </header>
       <main class="container content">
         <section class="main__section">
+          <div class="theme" id="theme"></div>
           <h1>Online Radio Serbia</h1>
           <article class="player">
             <audio id="av-tag" src="https://mastermedia.shoutca.st/proxy/prviradions?mp=/stream" controls></audio>
@@ -71,6 +72,11 @@
               <div class="content__menu-link" id="content__menu-link2">Hrvatska</div>
               <div class="content__menu-link" id="content__menu-link3">BiH</div>
             </div>
+            <div class="content__menu">
+              <div class="content__menu-link" id="content__menu-link4">http Srbija</div>
+              <div class="content__menu-link" id="content__menu-link5">http Hrvatska</div>
+              <div class="content__menu-link" id="content__menu-link6">http BiH</div>
+            </div>
           </article>
         </section>
         <section class="main__section">
@@ -96,10 +102,43 @@
             </div>
             <div id="content__item2">
               <h3 class="country-title">Hrvatska</h3>
+              <div class="stanica" id="hrv_1">Radio 1 Čakovec</div>
+              <div class="stanica" id="hrv_105">Radio 105 Selnica</div>
             </div>
             <div id="content__item3">
               <h3 class="country-title">BiH</h3>
               <div class="stanica" id="bih_8">Radio 8 Sarajevo</div>
+            </div>
+          </div>
+          <hr>
+          <div class="up"><a href="#header">Up</a></div>
+          <hr>
+        </section>
+        <section class="main__section">
+          <h2>Select radio station</h2>
+          <div class="content__items">
+            <div id="content__item4">
+              <h3 class="country-title">http Serbia</h3>
+              <div class="stanica" id="srb_luna">Radio Luna Užice</div>
+              <div class="stanica" id="srb_sljivovica">Radio Šljivovica Kaljevo</div>
+              <div class="stanica" id="srb_rts1">Radio RTS Beograd 1</div>
+            </div>
+            <div id="content__item5">
+              <h3 class="country-title">http Hrvatska</h3>
+              <div class="stanica" id="hrv_dalmsplit">Radio Dalmacija Split</div>
+              <div class="stanica" id="hrv_dalmoliver">Radio Dalmacija Oliver</div>
+              <div class="stanica" id="hrv_dalmrokija">Radio Dalmacija Rokija</div>
+              <div class="stanica" id="hrv_dalmfjaka">Radio Dalmacija Fjaka</div>
+              <div class="stanica" id="hrv_dalmfuresta">Radio Dalmacija Furešta</div>
+              <div class="stanica" id="hrv_dalmhajducke">Radio Dalmacija Hajdučke</div>
+              <div class="stanica" id="hrv_dalmpartymix">Radio Dalmacija Party Mix</div>
+            </div>
+            <div id="content__item6">
+              <h3 class="country-title">http BiH</h3>
+              <div class="stanica" id="bih_sehara">Radio Sehara Sarajevo</div>
+              <div class="stanica" id="bih_carsija">Radio Čaršija</div>
+              <div class="stanica" id="bih_bn">Radio BN</div>
+              <div class="stanica" id="bih_studiod">Radio Studio D</div>
             </div>
           </div>
           <hr>
@@ -114,5 +153,6 @@
     <script src="js/player.js"></script>
     <script src="js/order.js"></script>
     <script src="js/radio.js"></script>
+    <script src="js/theme.js"></script>
   </body>
 </html>
