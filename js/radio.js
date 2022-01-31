@@ -18,6 +18,96 @@ const radioCountry = document.getElementById('radio__country');
 
 
 /*****************
+Россия
+*****************/
+// Список русских станций https://e-radio.ru/
+const dataRusNovoe = {
+  title: "Новое радио",
+  country: "Russia",
+  stream: "https://emgspb.hostingradio.ru:80/novoespb64.mp3",
+  logo: "img/radio/rus-novoe.jpg",
+  site: "https://newradio.ru/",
+  id: "",
+  btnid: ""
+}
+
+const dataRusHoroshee = {
+  title: "Хорошее радио",
+  country: "Russia",
+  stream: "https://hr.amgradio.ru/Horoshee",
+  logo: "img/radio/rus-horoshee.svg",
+  site: "https://horoshee-radio.ru/",
+  id: "",
+  btnid: ""
+}
+
+const dataRusSkazka = {
+  title: "Радио сказка",
+  country: "Russia",
+  stream: "https://skazka.amgradio.ru/Skazka",
+  logo: "img/radio/rus-skazka.png",
+  site: "https://amgradio.ru/",
+  id: "",
+  btnid: ""
+}
+
+const dataRusUmnoe = {
+  title: "Умное радио",
+  country: "Russia",
+  stream: "https://umnoe.amgradio.ru/Umnoe",
+  logo: "img/radio/rus-umnoe.png",
+  site: "https://amgradio.ru/",
+  id: "",
+  btnid: ""
+}
+
+
+/*****************
+Беларусь
+*****************/
+// Список беларуских станций https://www.tvr.by/radio/
+const dataBel1kanal = {
+  title: "1 канал",
+  country: "Belarus",
+  stream: "https://stream2.datacenter.by/1kanal",
+  logo: "img/radio/bel-1.jpg",
+  site: "https://www.tvr.by/radio/1-kanal/",
+  id: "",
+  btnid: ""
+}
+
+const dataBelStalica = {
+  title: "Сталіца",
+  country: "Belarus",
+  stream: "https://stream2.datacenter.by/stalica",
+  logo: "img/radio/bel-stalica.jpg",
+  site: "https://www.radiostalica.by/",
+  id: "",
+  btnid: ""
+}
+
+const dataBelKultura = {
+  title: "Культура",
+  country: "Belarus",
+  stream: "https://stream2.datacenter.by/kultura",
+  logo: "img/radio/bel-kultura.png",
+  site: "https://radiokultura.by/",
+  id: "",
+  btnid: ""
+}
+
+const dataBelRadius = {
+  title: "Радиус FM",
+  country: "Belarus",
+  stream: "https://stream2.datacenter.by/radiusfm_main",
+  logo: "img/radio/bel-radius.png",
+  site: "http://www.radiusfm.by/",
+  id: "",
+  btnid: ""
+}
+
+
+/*****************
 Сербия
 *****************/
 const dataSrbPrviNovisad = {
@@ -383,6 +473,30 @@ const setRadio = (station) => {
 
 
 /*Добавим обработчики нажатия на button Listen live */
+
+
+/*****************
+Россия
+*****************/
+rus_novoe.addEventListener('click', () => setRadio(dataRusNovoe));
+
+rus_horoshee.addEventListener('click', () => setRadio(dataRusHoroshee));
+
+rus_skazka.addEventListener('click', () => setRadio(dataRusSkazka));
+
+rus_umnoe.addEventListener('click', () => setRadio(dataRusUmnoe));
+
+
+/*****************
+Беларусь
+*****************/
+bel_1kanal.addEventListener('click', () => setRadio(dataBel1kanal));
+
+bel_stalica.addEventListener('click', () => setRadio(dataBelStalica));
+
+bel_kultura.addEventListener('click', () => setRadio(dataBelKultura));
+
+bel_radius.addEventListener('click', () => setRadio(dataBelRadius));
 
 
 /*****************
