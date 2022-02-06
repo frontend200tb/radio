@@ -1,0 +1,28 @@
+#stream-disable {
+  display: none;
+
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0)
+  }
+}
+ 
+.marquee {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+ 
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 10s infinite linear;
+  font-size: 1rem;
+  color: red;
+}

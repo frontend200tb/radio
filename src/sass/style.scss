@@ -1,0 +1,35 @@
+:root {
+  --bg: #87ceeb;
+  --bor: #00aced;
+  --bg-dark1: #222;
+  --txt-dark1:#f4f4f4;
+  --bg-dark2: #373737;
+  --txt-dark2: #f4f4f4;
+  --bg-light1: #f4f4f4;
+  --txt-light1: #111;
+  --bg-light2: #4a76a8;
+  --txt-light2: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* 1rem */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+@import '../includes/page/page';
+@import '../includes/theme/theme';
+@import '../includes/snow/snow';
+@import '../includes/header/__header';
+@import '../includes/main/__main';
+@import '../includes/player/player';
+@import '../includes/footer/__footer';
