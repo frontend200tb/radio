@@ -2,9 +2,8 @@
 
 
 /*Создадим переменные для элементов Player*/
-const audioTag = document.getElementById('av-tag');
-const playImg=document.getElementById("play-img");
-const streamDisable = document.getElementById("stream-disable");
+const audio1 = document.querySelector('audio');
+// const streamDisable = document.getElementById("stream-disable");
 
 /*Создадим переменные для элементов Listen Radio*/
 const radioTitle = document.getElementById('radio__title');
@@ -457,17 +456,16 @@ const dataBihStudiod = {
 
 /*Функция setRadio записывает данные в плеер*/
 const setRadio = (station) => {
-  audioTag.setAttribute('src', station.stream);
+  audio1.setAttribute('src', station.stream);
   radioLogo.setAttribute('src', station.logo);
   radioSite.href = (station.site);
   radioSite.title = (station.site);
   radioTitle.innerHTML = (station.title);
   radioCountry.innerHTML = (station.country);
 
-  audioTag.pause();
-  audioTag.classList.remove("isPlaying");
-  playImg.src = "img/player/play.svg";
-  streamDisable.style.display = "none";
+  audio1.pause();
+  changePlayBtn();
+  // streamDisable.style.display = "none";
 }
 
 

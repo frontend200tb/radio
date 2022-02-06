@@ -1,87 +1,70 @@
-document.addEventListener("DOMContentLoaded", (e)=> {
+console.log('start 200tb Online Radio Serbia');
 
-//dom объекты элементов контроля
-  var av = document.getElementById("av-tag");
-
-  var playBtn=document.getElementById("play-btn");
-  var playImg=document.getElementById("play-img");
-  var playTime = document.getElementById("play-time");
-  var curTime = document.getElementById("cur-time");
-
-  var speakerBtn=document.getElementById("speaker-btn");
-  var speakerImg=document.getElementById("speaker-img");
-  var value=document.getElementById("value-num");
-  var volume = document.getElementById("volume");
-  const streamDisable = document.getElementById("stream-disable");
+const audio = document.querySelector("audio");
+const playBtn = document.querySelector(".play-btn");
+const timeNum = document.querySelector(".time-num");
+const stopBtn = document.querySelector(".stop-btn");
+const speakerBtn = document.querySelector(".speaker-btn");
+const volumeNum = document.querySelector(".volume-num");
+const volumeRange = document.querySelector(".volume-range");
+const streamDisable = document.getElementById("stream-disable");
 
 
-//Класс isPlaying в av для отслеживания воспроизведения звука
+/*******************
+Кнопка Play
+*******************/
+const play = () => audio.play();
+const pause = () => audio.pause();
+
+// Изменение кнопки play
+const changePlayBtn = () => {
+  audio.paused ? playBtn.classList.remove('pause') : playBtn.classList.add('pause');
+}
+
+// Клик на кнопке play
+const clickPlay = () => {
+  const method = audio.paused ? 'play' : 'pause';
+  audio[method]();
+  changePlayBtn();
+}
+
+// Клик на кнопке play
+playBtn.addEventListener('click', clickPlay);
+
+// Клик на кнопке stop
+const clickStop = () => {
+  const method = audio.paused ? 'play' : 'pause';
+  audio[method]();
+  changePlayBtn();
+}
+
+// Клик на кнопке stop
+stopBtn.addEventListener('click', clickStop);
 
 
-//функция для play/pause и изображения кнопки воспроизведения
-  playBtn.addEventListener("click", (a)=> {
-    if(av.classList.contains("isPlaying")) {
-      av.pause();
-      av.classList.remove("isPlaying");
-      playImg.src = "img/player/play.svg";
-    }
-    else {
-      playRadio()
-    }
-  });
-
+/*******************
+Ошибка если поток не загрузился
+*******************/
   async function playRadio() {
     try {
-      av.classList.add("isPlaying");
-      playImg.src = "img/player/pause.svg";
+      changePlayBtn();
       streamDisable.style.display = "none";
-      await av.play();
+      await audio.play();
     }
     catch(err) {
-      av.pause();
-      av.classList.remove("isPlaying");
-      playImg.src = "img/player/play.svg";
+      audio.pause();
+      changePlayBtn();
       streamDisable.style.display = "block";
     }
   }
 
 
+/*******************
+Вычисление времени воспроизведения
+*******************/
+    audio.ontimeupdate = function() {
 
-
-//функция для настройки громкости
-     volume.onchange=function() { 
-        av.volume = volume.value/100;
-        value.innerHTML = volume.value;
-        if(volume.value==0) { 
-           speakerImg.src="img/player/mute.svg"
-        }
-     };
-
-//функция для вкл/выкл громкости
-     speakerBtn.onclick=function() {
-
-      if(volume.value==0) {
-         volume.value=50; av.volume=1;
-         speakerImg.src="img/player/speaker.svg"
-         value.innerHTML = volume.value;
-      }
-      else {
-         volume.value=0; av.volume=0;
-         speakerImg.src="img/player/mute.svg"
-         value.innerHTML = volume.value;
-      }
-
-    };
-
-//Время равно времени трека
-    av.onloadedmetadata = function() {
-      curTime.max=av.duration;
-    };
-
-//функция вывода текущего времени воспроизведения
-    av.ontimeupdate=function() {
-
-        var sec_num = av.currentTime;
+        var sec_num = audio.currentTime;
         var hours   = Math.floor(sec_num / 3600);
         var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
         var seconds = sec_num - (hours * 3600) - (minutes * 60);
@@ -93,14 +76,56 @@ document.addEventListener("DOMContentLoaded", (e)=> {
         if (minutes < 10) {
           minutes = "0"+minutes;
         }
-        if (seconds < 10) { seconds = "0"+seconds; } playTime.innerHTML = minutes+':'+seconds; 
-        if(av.classList.contains("isPlaying")) curTime.value=av.currentTime; 
+        if (seconds < 10) { seconds = "0"+seconds; } timeNum.innerHTML = minutes+':'+seconds;
    };
 
-//функция для установки начала воспроизведения
-    curTime.onchange=function() { 
 
-      av.pause(); av.currentTime = curTime.value; av.play(); 
-    };
+   /*******************
+Кнопка вкл/выкл громкости
+*******************/
+let currentVolume = Number(volumeNum.innerHTML);
 
-});
+// Изменение кнопки вкл/выкл громкости
+const changeSpeakerBtn = () => speakerBtn.classList.toggle('mute');
+
+// Клик на кнопке вкл/выкл громкости
+const clickVolume = () => {
+
+  if (volumeRange.value == 0) {
+    volumeRange.value = currentVolume; 
+    audio.volume = volumeRange.value / 100;
+    volumeNum.innerHTML = volumeRange.value;
+  }
+  else {
+    currentVolume = volumeRange.value;
+    volumeRange.value = 0; 
+    audio.volume = 0;
+    volumeNum.innerHTML = volumeRange.value;
+  }
+
+  changeSpeakerBtn();
+}
+
+// Клик на кнопке вкл/выкл громкости
+speakerBtn.addEventListener('click', clickVolume);
+
+
+/*******************
+Изменение регулятора громкости
+*******************/
+const changeVolume = () => { 
+  audio.volume = volumeRange.value / 100;
+  volumeNum.innerHTML = volumeRange.value;
+  if(volumeRange.value == 0 && !speakerBtn.classList.contains('mute')) { 
+    speakerBtn.classList.add('mute');
+  }
+  if(volumeRange.value != 0 && speakerBtn.classList.contains('mute')) { 
+    speakerBtn.classList.remove('mute');
+  }
+};
+
+// Изменение регулятора громкости
+volumeRange.addEventListener('change', changeVolume);
+
+
+console.log('js code complete 200tb Online Radio Serbia');

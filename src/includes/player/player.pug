@@ -1,17 +1,17 @@
-audio#av-tag(src="https://mastermedia.shoutca.st/proxy/prviradions?mp=/stream", controls)
+audio(src="https://mastermedia.shoutca.st/proxy/prviradions?mp=/stream")
 
 .player-time
-  button.play-btn#play-btn
-    img#play-img.play(src="img/player/play.svg", alt="")
+  button.play-btn
 
-  #play-time 1:00
-  input#cur-time(type="range", min="0", max="10", step="0")
+  .time-num 00:00
+
+  button.stop-btn
 
 .player-volume
-  button#speaker-btn
-    img.speaker#speaker-img(src="img/player/speaker.svg")
+  button.speaker-btn
 
-  #value-num 50
-  input#volume(type="range", min="0", max="100" volume="50")
+  .volume-num 100
+  
+  input.volume-range(type="range", min="0", max="100" value="100")
 
 include includes/marquee.pug
