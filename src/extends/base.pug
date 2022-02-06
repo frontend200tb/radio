@@ -1,0 +1,39 @@
+block vars
+  - let description = 'Online radio created in 200TB Web Studio';
+  - let keywords = 'online radio';
+  - let title = 'Online Radio Serbia';
+  - let style = 'css/style.css';
+  - let favicon = 'img/favicon/favicon.png';
+
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="author" content="Иван Каширин")
+    meta(name="copyright" content="200TB Web Studio")
+    meta(name="description" content=description)
+    meta(name="keywords" content=keywords)
+
+    title #{title}
+
+    link(rel="stylesheet" href=style)
+    link(rel="icon" href=favicon)
+
+  body
+    .page.snow#page
+      header.header#header
+        include ../includes/header/header
+
+      main.container.content
+        block main
+
+      footer.footer
+        include ../includes/footer/footer.pug
+
+    script(src='js/player.js')
+    script(src='js/order.js')
+    script(src='js/radio.js')
+    script(src='js/theme.js')

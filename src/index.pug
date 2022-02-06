@@ -1,0 +1,25 @@
+extends extends/base.pug
+
+block main
+  section.main__section
+    include includes/theme/theme.pug
+    h1 Online Radio Serbia
+
+    article.player
+      include includes/player/player.pug
+
+    hr
+
+    article.listen-radio
+      include includes/main/_listen-radio.pug
+
+    hr
+
+    article.select-country
+      include includes/main/_select-country.pug
+
+  section.main__section
+    include includes/main/_select-radio.pug
+
+  section.main__section
+    include includes/main/_select-radio-http.pug
