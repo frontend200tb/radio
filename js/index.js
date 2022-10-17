@@ -251,7 +251,7 @@ request.onload = () => {
   stations = request.response;
   console.log('Данные радиостанций из json', stations);
   
-  for(let i = 0; i < 27; i++) {
+  for(let i = 0; i < stations.length; i++) {
     dataStations[i] = new Station (stations[i].title, stations[i].country, stations[i].stream, stations[i].logo, stations[i].site);
     stanice[i].addEventListener('click', () => setRadio(dataStations[i]));
   }
@@ -270,7 +270,7 @@ request1.onload = () => {
   stations1 = request1.response;
   console.log('Данные радиостанций из json1', stations1);
 
-  for(let i = 0; i < 15; i++) {
+  for(let i = 0; i < 16; i++) {
     dataStations1[i] = new Station (stations1[i].title, stations1[i].country, stations1[i].stream, stations1[i].logo, stations1[i].site);
     stanice1[i].addEventListener('click', () => setRadio(dataStations1[i]));
   }
@@ -278,7 +278,8 @@ request1.onload = () => {
 
 // Список русских станций https://e-radio.ru/
 // Список беларуских станций https://www.tvr.by/radio/
-
+    // https://e3.radiomorava.rs/radio/8020
+    //http://78.129.199.49:12100/
 
 /*****************
 Функция setRadio записывает данные в плеер
