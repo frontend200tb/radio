@@ -147,6 +147,13 @@
     "site" : "https://radioas.fm/"
   },
   {
+    "title" : "Radio Šljivovica Kaljevo",
+    "country" : "Srbija",
+    "stream" : "https://stream.iradio.pro/proxy/radiosljivovica?mp=/stream",
+    "logo" : "srb-sljivovica.png",
+    "site" : "https://www.radiosljivovica.net/"
+  },
+  {
     "title" : "Radio Sputnjik Srbija",
     "country" : "Srbija",
     "stream" : "https://icecast-rian.cdnvideo.ru/voicesrb",

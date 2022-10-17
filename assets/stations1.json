@@ -1,19 +1,5 @@
 [
   {
-    "title" : "Radio Luna Užice FM 92MHz",
-    "country" : "Srbija",
-    "stream" : "http://radio.m-1.fm/laluna/mp3",
-    "logo" : "srb-luna.png",
-    "site" : "https://www.radioluna.info/"
-  },
-  {
-    "title" : "Radio Šljivovica Kaljevo",
-    "country" : "Srbija",
-    "stream" : "http://stream.iradio.pro:8114/stream",
-    "logo" : "srb-sljivovica.png",
-    "site" : "https://www.radiosljivovica.net/"
-  },
-  {
     "title" : "Radio RTS Beograd 1",
     "country" : "Srbija",
     "stream" : "http://138.201.33.203:8000/rts_1",
