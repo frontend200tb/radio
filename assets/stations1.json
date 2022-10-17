@@ -1,5 +1,13 @@
 [
   {
+    "title" : "Cool radio",
+    "country" : "Srbija",
+    "stream" : "http://176.9.30.66/",
+    "logo" : "srb-cool.png",
+    "site" : "https://coolradio.rs/"
+  },
+
+  {
     "title" : "Radio RTS Beograd 1",
     "country" : "Srbija",
     "stream" : "http://138.201.33.203:8000/rts_1",

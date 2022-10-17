@@ -168,6 +168,55 @@
     "site" : "http://radio101.rs/"
   },
   {
+    "title" : "Radio Morava - Jagodina",
+    "country" : "Srbija",
+    "stream" : "https://e3.radiomorava.rs/radio/8000/radiomorava128.mp3",
+    "logo" : "srb-morava.png",
+    "site" : "http://www.radiomorava.rs/"
+  },
+  {
+    "title" : "Resavski Radio - Veliki Popovic",
+    "country" : "Srbija",
+    "stream" : "https://e3.radiomorava.rs/radio/8010/resavskiradio128.mp3",
+    "logo" : "srb-resavski.jpg",
+    "site" : "http://www.radiomorava.rs/"
+  },
+  {
+    "title" : "Morava VIC Radio - Jagodina",
+    "country" : "Srbija",
+    "stream" : "https://e3.radiomorava.rs/radio/8020/vic.mp3",
+    "logo" : "srb-morava-vic.jpg",
+    "site" : "http://www.radiomorava.rs/"
+  },
+  {
+    "title" : "Morava KOLO Radio - Jagodina",
+    "country" : "Srbija",
+    "stream" : "https://e3.radiomorava.rs/radio/8040/kolo.mp3",
+    "logo" : "srb-morava-kolo.jpg",
+    "site" : "http://www.radiomorava.rs/"
+  },
+  {
+    "title" : "Morava ETNO Radio - Jagodina",
+    "country" : "Srbija",
+    "stream" : "https://e3.radiomorava.rs/radio/8050/etno.mp3",
+    "logo" : "srb-morava-etno.jpg",
+    "site" : "http://www.radiomorava.rs/"
+  },
+  {
+    "title" : "Morava POP ROK Radio - Jagodina",
+    "country" : "Srbija",
+    "stream" : "https://e3.radiomorava.rs/radio/8060/poprok.mp3",
+    "logo" : "srb-morava-pop-rok.jpg",
+    "site" : "http://www.radiomorava.rs/"
+  },
+  {
+    "title" : "Morava TOP 50 Radio - Jagodina",
+    "country" : "Srbija",
+    "stream" : "https://e3.radiomorava.rs/radio/8070/top50.mp3",
+    "logo" : "srb-morava-top-50.jpg",
+    "site" : "http://www.radiomorava.rs/"
+  },
+  {
     "title" : "Radio 1 Čakovec",
     "country" : "Hrvatska",
     "stream" : "https://azuracast.novi-net.net/radio/8020/radio1.mp3",
