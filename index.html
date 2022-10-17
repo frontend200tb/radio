@@ -3,61 +3,61 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Иван Каширин">
     <meta name="copyright" content="200TB Web Studio">
     <meta name="description" content="Online radio created in 200TB Web Studio">
     <meta name="keywords" content="online radio">
     <title>Online Radio Serbia</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/favicon/favicon.png">
+    <link rel="icon" href="assets/favicon.png">
   </head>
   <body>
     <div class="page snow" id="page">
-      <header class="header" id="header">
+      <header class="header container">
         <div class="header__first-row">
           
-          <img class="header-logo" src="img/logo.png" alt="200Terabyte Web Studio logo">
+          <img class="header-logo" src="assets/img/logo.png" alt="200Terabyte Web Studio logo">
           
         </div>
         <div class="header__second-row">
           <div class="social" id="social">
             
-            <a class="social__icon social__icon_wa" href="https://wa.me/79507658158" title="WhatsApp"></a>
-            <a class="social__icon social__icon_vk" href="https://vk.com/benchpress250" title="ВКонтакте"></a>
-            <a class="social__icon social__icon_tg" href="https://t.me/Frontend200tb" title="Telegram"></a>
-            <a class="social__icon social__icon_ig" href="https://www.instagram.com/frontend200tb/" title="Instagram"></a>
-            <a class="social__icon social__icon_github" href="https://github.com/frontend200tb" title="GitHub"></a>
-            <a class="social__icon social__icon_cp" href="https://codepen.io/ivan200tb/" title="Codepen"></a>
-            <a class="social__icon social__icon_cw" href="https://www.codewars.com/users/frontend200tb" title="Codewars"></a>
-            <a class="social__icon social__icon_replit" href="https://replit.com/@frontend200tb" title="Repl.it"></a>
-            <a class="social__icon social__icon_yt" href="https://www.youtube.com/channel/UCxQkWhcXUes0CdxvJH3B7Ug" title="Youtube"></a>
-            <a class="social__icon social__icon_fb" href="https://www.facebook.com/frontend200tb" title="Facebook"></a>
-            <a class="social__icon social__icon_tw" href="https://twitter.com/frontend200tb" title="Twitter"></a>
+            <a class="social__icon social__icon_wa" href="https://wa.me/79507658158" title="WhatsApp" target="_blank"></a>
+            <a class="social__icon social__icon_vk" href="https://vk.com/benchpress250" title="ВКонтакте" target="_blank"></a>
+            <a class="social__icon social__icon_tg" href="https://t.me/Frontend200tb" title="Telegram" target="_blank"></a>
+            <a class="social__icon social__icon_ig" href="https://www.instagram.com/frontend200tb/" title="Instagram" target="_blank"></a>
+            <a class="social__icon social__icon_github" href="https://github.com/frontend200tb" title="GitHub" target="_blank"></a>
+            <a class="social__icon social__icon_cp" href="https://codepen.io/ivan200tb/" title="Codepen" target="_blank"></a>
+            <a class="social__icon social__icon_cw" href="https://www.codewars.com/users/frontend200tb" title="Codewars" target="_blank"></a>
+            <a class="social__icon social__icon_replit" href="https://replit.com/@frontend200tb" title="Repl.it" target="_blank"></a>
+            <a class="social__icon social__icon_yt" href="https://www.youtube.com/channel/UCxQkWhcXUes0CdxvJH3B7Ug" title="Youtube" target="_blank"></a>
+            <a class="social__icon social__icon_fb" href="https://www.facebook.com/frontend200tb" title="Facebook" target="_blank"></a>
+            <a class="social__icon social__icon_tw" href="https://twitter.com/frontend200tb" title="Twitter" target="_blank"></a>
             
+            <div class="theme" id="theme"></div>
           </div>
         </div>
       </header>
-      <main class="container content">
+      <main class="main container">
         <section class="main__section">
           <h1>Online Radio Serbia</h1>
           <article class="player">
-            <audio id="av-tag" src="https://mastermedia.shoutca.st/proxy/prviradions?mp=/stream" controls></audio>
+            <audio src="https://mastermedia.shoutca.st/proxy/prviradions?mp=/stream"></audio>
             <div class="player-time">
-              <button class="play-btn" id="play-btn"><img class="play" id="play-img" src="img/player/play.svg" alt=""></button>
-              <div id="play-time">1:00</div>
-              <input id="cur-time" type="range" min="0" max="10" step="0">
+              <button class="play-btn"></button>
+              <div class="time-num">00:00</div>
+              <button class="stop-btn"></button>
             </div>
             <div class="player-volume">
-              <button id="speaker-btn"><img class="speaker" id="speaker-img" src="img/player/speaker.svg"></button>
-              <div id="value-num">50</div>
-              <input id="volume" type="range" min="0" max="100" volume="50">
+              <button class="speaker-btn"></button>
+              <div class="volume-num">100</div>
+              <input class="volume-range" type="range" min="0" max="100" value="100">
             </div>
             <div class="marquee" id="stream-disable"><span>stream disable at the moment</span></div>
           </article>
           <hr>
           <article class="listen-radio">
-            <h2>Listen online radio</h2><a id="radio__site" href="https://prviradio.rs/radiochannel/prvi-radio-novi-sad/" title="https://prviradio.rs/radiochannel/prvi-radio-novi-sad/"><img class="radio__logo" id="radio__logo" src="img/radio/srb-prvi-novi-sad.png" alt="logo Prvi Radio Novi Sad"></a>
+            <h2>Listen online radio</h2><a id="radio__site" href="https://prviradio.rs/radiochannel/prvi-radio-novi-sad/" title="https://prviradio.rs/radiochannel/prvi-radio-novi-sad/" target="_blank"><img class="radio__logo" id="radio__logo" src="assets/img/radio/srb-prvi-novi-sad.png" alt="logo Prvi Radio Novi Sad"></a>
             <div class="radio__description">
               <div id="radio__title">Prvi Radio Novi Sad</div>
               <div id="radio__country">Srbija</div>
@@ -67,9 +67,16 @@
           <article class="select-country">
             <h2>Select country</h2>
             <div class="content__menu">
-              <div class="content__menu-link" id="content__menu-link1">Srbija</div>
-              <div class="content__menu-link" id="content__menu-link2">Hrvatska</div>
-              <div class="content__menu-link" id="content__menu-link3">BiH</div>
+              <div class="content__menu-link" id="content__menu-link1">Россия</div>
+              <div class="content__menu-link" id="content__menu-link2">Беларусь</div>
+              <div class="content__menu-link" id="content__menu-link3">Srbija</div>
+              <div class="content__menu-link" id="content__menu-link4">Hrvatska</div>
+              <div class="content__menu-link" id="content__menu-link5">BiH</div>
+            </div>
+            <div class="content__menu">
+              <div class="content__menu-link" id="content__menu-link6">http Srbija</div>
+              <div class="content__menu-link" id="content__menu-link7">http Hrvatska</div>
+              <div class="content__menu-link" id="content__menu-link8">http BiH</div>
             </div>
           </article>
         </section>
@@ -77,29 +84,79 @@
           <h2>Select radio station</h2>
           <div class="content__items">
             <div id="content__item1">
-              <h3 class="country-title">Srbija</h3>
-              <div class="stanica" id="srb_prvinsad">Prvi Radio Novi Sad</div>
-              <div class="stanica" id="srb_prvisubo">Prvi Radio Subotica</div>
-              <div class="stanica" id="srb_prviuzice">Prvi Radio Užice</div>
-              <div class="stanica" id="srb_prvikafa">Prvi Radio Kafanica</div>
-              <div class="stanica" id="srb_prvi90">Prvi Radio 90-te</div>
-              <div class="stanica" id="srb_prvicafe">Prvi Radio Cafe</div>
-              <div class="stanica" id="srb_prvitren">Prvi Radio Trending</div>
-              <div class="stanica" id="srb_prviyu">Prvi Radio YU kolekcija</div>
-              <div class="stanica" id="srb_in">Radio In Beograd</div>
-              <div class="stanica" id="srb_aparat">Radio Aparat Beograd</div>
-              <div class="stanica" id="srb_puls">Radio Puls Grocka</div>
-              <div class="stanica" id="srb_012">Radio 012 Požarevac</div>
-              <div class="stanica" id="srb_asfm">Radio AS FM Novi Sad</div>
-              <div class="stanica" id="srb_sputnjik">Radio Sputnjik</div>
-              <div class="stanica" id="srb_101">Radio 101 Beograd</div>
+              <h3 class="country-title">Россия</h3>
+              <div class="stanica">Новое радио</div>
+              <div class="stanica">Хорошее радио</div>
+              <div class="stanica">Сказка FM</div>
+              <div class="stanica">Умное FM</div>
             </div>
             <div id="content__item2">
-              <h3 class="country-title">Hrvatska</h3>
+              <h3 class="country-title">Беларусь</h3>
+              <div class="stanica">1 канал</div>
+              <div class="stanica">Сталiца</div>
+              <div class="stanica">Культура</div>
+              <div class="stanica">Радиус FM</div>
             </div>
             <div id="content__item3">
+              <h3 class="country-title">Srbija</h3>
+              <div class="stanica">Prvi Radio Novi Sad</div>
+              <div class="stanica">Prvi Radio Subotica</div>
+              <div class="stanica">Prvi Radio Užice</div>
+              <div class="stanica">Prvi Radio Kafanica</div>
+              <div class="stanica">Prvi Radio 90-te</div>
+              <div class="stanica">Prvi Radio Cafe</div>
+              <div class="stanica">Prvi Radio Trending</div>
+              <div class="stanica">Prvi Radio YU kolekcija</div>
+              <div class="stanica">Radio In Beograd</div>
+              <div class="stanica">Radio Aparat Beograd</div>
+              <div class="stanica">Radio Puls Grocka</div>
+              <div class="stanica">Radio 012 Požarevac</div>
+              <div class="stanica">Radio AS FM Novi Sad</div>
+              <div class="stanica">Radio Sputnjik</div>
+              <div class="stanica">Radio 101 Beograd</div>
+            </div>
+            <div id="content__item4">
+              <h3 class="country-title">Hrvatska</h3>
+              <div class="stanica">Radio 1 Čakovec</div>
+              <div class="stanica">Radio 105 Selnica</div>
+            </div>
+            <div id="content__item5">
               <h3 class="country-title">BiH</h3>
-              <div class="stanica" id="bih_8">Radio 8 Sarajevo</div>
+              <div class="stanica">Radio 8 Sarajevo</div>
+            </div>
+          </div>
+          <hr>
+          <div class="up"><a href="#header">Up</a></div>
+          <hr>
+        </section>
+        <section class="main__section">
+          <h2>Select radio station</h2>
+          <div class="content__items">
+            <div id="content__item6">
+              <h3 class="country-title">http Serbia</h3>
+              <div class="stanicaHttp">Radio Luna Užice</div>
+              <div class="stanicaHttp">Radio Šljivovica Kaljevo</div>
+              <div class="stanicaHttp">Radio RTS Beograd 1</div>
+              <div class="stanicaHttp">Radio RTS Beograd 2</div>
+              <div class="stanicaHttp">Radio RTS Beograd 3</div>
+              <div class="stanicaHttp">Radio RTS Beograd 202</div>
+            </div>
+            <div id="content__item7">
+              <h3 class="country-title">http Hrvatska</h3>
+              <div class="stanicaHttp" id="hrv_dalmsplit">Radio Dalmacija Split</div>
+              <div class="stanicaHttp" id="hrv_dalmoliver">Radio Dalmacija Oliver</div>
+              <div class="stanicaHttp" id="hrv_dalmrokija">Radio Dalmacija Rokija</div>
+              <div class="stanicaHttp" id="hrv_dalmfjaka">Radio Dalmacija Fjaka</div>
+              <div class="stanicaHttp" id="hrv_dalmfuresta">Radio Dalmacija Furešta</div>
+              <div class="stanicaHttp" id="hrv_dalmhajducke">Radio Dalmacija Hajdučke</div>
+              <div class="stanicaHttp" id="hrv_dalmpartymix">Radio Dalmacija Party Mix</div>
+            </div>
+            <div id="content__item8">
+              <h3 class="country-title">http BiH</h3>
+              <div class="stanicaHttp" id="bih_sehara">Radio Sehara Sarajevo</div>
+              <div class="stanicaHttp" id="bih_carsija">Radio Čaršija</div>
+              <div class="stanicaHttp" id="bih_bn">Radio BN</div>
+              <div class="stanicaHttp" id="bih_studiod">Radio Studio D</div>
             </div>
           </div>
           <hr>
@@ -107,12 +164,10 @@
           <hr>
         </section>
       </main>
-      <footer class="footer">
-        <div class="footer-title">Created in <a href="https://frontend200tb.github.io/start/">200TERABYTE Web Studio</a></div>
+      <footer class="footer container">
+        <div class="footer-title">Created in <a href="https://frontend200tb.github.io/start/" target="_blank">200TERABYTE Web Studio</a></div>
       </footer>
     </div>
-    <script src="js/player.js"></script>
-    <script src="js/order.js"></script>
-    <script src="js/radio.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
