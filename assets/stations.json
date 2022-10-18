@@ -14,18 +14,25 @@
     "site" : "https://horoshee-radio.ru/"
   },
   {
-    "title" : "Радио сказка",
+    "title" : "Русская волна",
+    "country" : "Russia",
+    "stream" : "https://ru1.amgradio.ru/RuWave48",
+    "logo" : "rus-russkaja-volna.svg",
+    "site" : "https://horoshee-radio.ru/"
+  },
+  {
+    "title" : "Сказка FM",
     "country" : "Russia",
     "stream" : "https://skazka.amgradio.ru/Skazka",
     "logo" : "rus-skazka.png",
-    "site" : "https://amgradio.ru/"
+    "site" : "https://horoshee-radio.ru/"
   },
   {
     "title" : "Умное радио",
     "country" : "Russia",
     "stream" : "https://umnoe.amgradio.ru/Umnoe",
     "logo" : "rus-umnoe.png",
-    "site" : "https://amgradio.ru/"
+    "site" : "https://horoshee-radio.ru/"
   },
   {
     "title" : "1 канал",
