@@ -219,11 +219,20 @@ const radioTitle = document.getElementById('radio__title');
 const radioLogo = document.getElementById('radio__logo');
 const radioSite = document.getElementById('radio__site');
 const radioCountry = document.getElementById('radio__country');
-const stanice = document.querySelectorAll('.stanica');
 const stanice1 = document.querySelectorAll('.stanicaHttp');
+const rusStanice = document.querySelector('#content__item1');
+const belStanice = document.querySelector('#content__item2');
+const srbStanice = document.querySelector('#content__item3');
+const hrvStanice = document.querySelector('#content__item4');
+const bihStanice = document.querySelector('#content__item5');
+const srbStanice1 = document.querySelector('#content__item6');
+const hrvStanice1 = document.querySelector('#content__item7');
+const bihStanice1 = document.querySelector('#content__item8');
+
 
 /*Создадим переменную для папки где лежат картинки*/
 const logoPath = 'assets/img/radio/';
+
 
 /*Создадим класс для объектов для радиостанций*/
 class Station {
@@ -240,8 +249,20 @@ class Station {
 /*В файле stations.json радиостанции https*/
 const stationsURL = 'assets/stations.json';
 let stations = [];
-let dataStations = [];
+const dataStations = [];
+const dataRussia = [];
+const elemDataRussia = [];
+const dataBelarus = [];
+const elemDataBelarus = [];
+const dataSrbija = [];
+const elemDataSrbija = [];
+const dataHrvatska = [];
+const elemDataHrvatska = [];
+const dataBiH = [];
+const elemDataBiH = [];
 
+
+//Делаем запрос на получение json
 const request = new XMLHttpRequest();
 request.open('GET', stationsURL);
 request.responseType = 'json';
@@ -251,35 +272,178 @@ request.onload = () => {
   stations = request.response;
   console.log('Данные радиостанций из json', stations);
   
+  //Для каждого элемента из json создаем станцию
   for(let i = 0; i < stations.length; i++) {
     dataStations[i] = new Station (stations[i].title, stations[i].country, stations[i].stream, stations[i].logo, stations[i].site);
-    stanice[i].addEventListener('click', () => setRadio(dataStations[i]));
   }
+
+  //Каждую станцию кладем в массив в зависимости от страны
+  for(let i = 0; i < dataStations.length; i++) {
+      switch (dataStations[i].country) {
+      case 'Russia':
+        dataRussia.push(dataStations[i]);
+        break;
+      case 'Belarus':
+        dataBelarus.push(dataStations[i]);
+        break;
+      case 'Srbija':
+        dataSrbija.push(dataStations[i]);
+        break;
+      case 'Hrvatska':
+        dataHrvatska.push(dataStations[i]);
+        break;
+      case 'BiH':
+        dataBiH.push(dataStations[i]);
+        break;
+    }
+  }
+
+  //Для каждой станции из России создаем кнопку
+  for(let i = 0; i < dataRussia.length; i++) {
+    elemDataRussia[i] = document.createElement('div');
+    elemDataRussia[i].className = "stanica";
+    elemDataRussia[i].innerHTML = dataRussia[i].title;
+    rusStanice.appendChild(elemDataRussia[i]);
+
+    //И вешаем на эту кнопку обработчик клика
+    elemDataRussia[i].addEventListener('click', () => setRadio(dataRussia[i]));
+  }
+  console.log('Данные радиостанций из России', dataRussia);
+
+  //Для каждой станции из Беларуси создаем кнопку
+  for(let i = 0; i < dataBelarus.length; i++) {
+    elemDataBelarus[i] = document.createElement('div');
+    elemDataBelarus[i].className = "stanica";
+    elemDataBelarus[i].innerHTML = dataBelarus[i].title;
+    belStanice.appendChild(elemDataBelarus[i]);
+
+    //И вешаем на эту кнопку обработчик клика
+    elemDataBelarus[i].addEventListener('click', () => setRadio(dataBelarus[i]));
+  }
+  console.log('Данные радиостанций из Беларуси', dataBelarus);
+
+  //Для каждой станции из Сербии создаем кнопку
+  for(let i = 0; i < dataSrbija.length; i++) {
+    elemDataSrbija[i] = document.createElement('div');
+    elemDataSrbija[i].className = "stanica";
+    elemDataSrbija[i].innerHTML = dataSrbija[i].title;
+    srbStanice.appendChild(elemDataSrbija[i]);
+
+    //И вешаем на эту кнопку обработчик клика
+    elemDataSrbija[i].addEventListener('click', () => setRadio(dataSrbija[i]));
+  }
+  console.log('Данные радиостанций из Сербии', dataSrbija);
+
+  //Для каждой станции из Хорватии создаем кнопку
+  for(let i = 0; i < dataHrvatska.length; i++) {
+    elemDataHrvatska[i] = document.createElement('div');
+    elemDataHrvatska[i].className = "stanica";
+    elemDataHrvatska[i].innerHTML = dataHrvatska[i].title;
+    hrvStanice.appendChild(elemDataHrvatska[i]);
+
+    //И вешаем на эту кнопку обработчик клика
+    elemDataHrvatska[i].addEventListener('click', () => setRadio(dataHrvatska[i]));
+  }
+  console.log('Данные радиостанций из Хорватии', dataHrvatska);
+
+  //Для каждой станции из Боснии создаем кнопку
+  for(let i = 0; i < dataBiH.length; i++) {
+    elemDataBiH[i] = document.createElement('div');
+    elemDataBiH[i].className = "stanica";
+    elemDataBiH[i].innerHTML = dataBiH[i].title;
+    bihStanice.appendChild(elemDataBiH[i]);
+
+    //И вешаем на эту кнопку обработчик клика
+    elemDataBiH[i].addEventListener('click', () => setRadio(dataBiH[i]));
+  }
+  console.log('Данные радиостанций из Боснии', dataBiH);
+
 }
 
 /*В файле stations1.json радиостанции http*/
 const stations1URL = 'assets/stations1.json';
 let stations1 = [];
-let dataStations1 = [];
+const dataStations1 = [];
+const dataSrbija1 = [];
+const elemDataSrbija1 = [];
+const dataHrvatska1 = [];
+const elemDataHrvatska1 = [];
+const dataBiH1 = [];
+const elemDataBiH1 = [];
 
+
+//Делаем запрос на получение json
 const request1 = new XMLHttpRequest();
 request1.open('GET', stations1URL);
 request1.responseType = 'json';
 request1.send();
+
 request1.onload = () => {
   stations1 = request1.response;
   console.log('Данные радиостанций из json1', stations1);
 
-  for(let i = 0; i < 16; i++) {
+  //Для каждого элемента из json1 создаем станцию
+  for(let i = 0; i < stations1.length; i++) {
     dataStations1[i] = new Station (stations1[i].title, stations1[i].country, stations1[i].stream, stations1[i].logo, stations1[i].site);
-    stanice1[i].addEventListener('click', () => setRadio(dataStations1[i]));
   }
+
+  //Каждую станцию кладем в массив в зависимости от страны
+  for(let i = 0; i < dataStations1.length; i++) {
+    switch (dataStations1[i].country) {
+    case 'Srbija':
+      dataSrbija1.push(dataStations1[i]);
+      break;
+    case 'Hrvatska':
+      dataHrvatska1.push(dataStations1[i]);
+      break;
+    case 'BiH':
+      dataBiH1.push(dataStations1[i]);
+      break;
+    }
+  }
+
+
+  //Для каждой станции из Сербии создаем кнопку
+  for(let i = 0; i < dataSrbija1.length; i++) {
+    elemDataSrbija1[i] = document.createElement('div');
+    elemDataSrbija1[i].className = "stanica";
+    elemDataSrbija1[i].innerHTML = dataSrbija1[i].title;
+    srbStanice1.appendChild(elemDataSrbija1[i]);
+
+    //И вешаем на эту кнопку обработчик клика
+    elemDataSrbija1[i].addEventListener('click', () => setRadio(dataSrbija1[i]));
+  }
+  console.log('Данные радиостанций из Сербии', dataSrbija1);
+
+  //Для каждой станции из Хорватии создаем кнопку
+  for(let i = 0; i < dataHrvatska1.length; i++) {
+    elemDataHrvatska1[i] = document.createElement('div');
+    elemDataHrvatska1[i].className = "stanica";
+    elemDataHrvatska1[i].innerHTML = dataHrvatska1[i].title;
+    hrvStanice1.appendChild(elemDataHrvatska1[i]);
+
+    //И вешаем на эту кнопку обработчик клика
+    elemDataHrvatska1[i].addEventListener('click', () => setRadio(dataHrvatska1[i]));
+  }
+  console.log('Данные радиостанций из Хорватии', dataHrvatska1);
+
+  //Для каждой станции из Боснии создаем кнопку
+  for(let i = 0; i < dataBiH1.length; i++) {
+    elemDataBiH1[i] = document.createElement('div');
+    elemDataBiH1[i].className = "stanica";
+    elemDataBiH1[i].innerHTML = dataBiH1[i].title;
+    bihStanice1.appendChild(elemDataBiH1[i]);
+
+    //И вешаем на эту кнопку обработчик клика
+    elemDataBiH1[i].addEventListener('click', () => setRadio(dataBiH1[i]));
+  }
+  console.log('Данные радиостанций из Боснии', dataBiH1);
+
 }
 
 // Список русских станций https://e-radio.ru/
 // Список беларуских станций https://www.tvr.by/radio/
-    // https://e3.radiomorava.rs/radio/8020
-    //http://78.129.199.49:12100/
+
 
 /*****************
 Функция setRadio записывает данные в плеер
