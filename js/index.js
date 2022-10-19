@@ -8,75 +8,29 @@ main.content
 
 /*Основная функция убирает class order -1 у старого элемента и добавляет новому*/
 function addOrder(item){
-    console.log(item);
     old.classList.remove('content__order');
     item.classList.add('content__order');
-    console.log(item);
     old = item;
 }
-/*Основная функция убирает class order -1 у старого элемента и добавляет новому*/
+/*конец Основная функция убирает class order -1 у старого элемента и добавляет новому*/
 
 
-/**************Content*/
+/***************************
+Выбираем ссылки для основного контента и вешаем обработчик событий
+***************************/
+const menu_links = document.querySelectorAll('.content__menu-link');
+const content_items = document.querySelectorAll('.content__item');
 
-if (document.getElementById('content__menu-link1') &&
-    document.getElementById('content__item1')) {
-    var old = document.getElementById('content__menu-link1');
-    const menu_link1 = document.getElementById('content__menu-link1');
-    const item1 = document.getElementById('content__item1');
-    menu_link1.addEventListener('click', () => addOrder(item1));
+/*если ссылки для основного контента есть*/
+if (menu_links[0]) {
+  var old = menu_links[0]; // первая ссылка должна быть наверху
+  console.log('на странице есть ссылки основного меню, первый элемент ', old);
+  for (let i = 0; i<menu_links.length; i++) {
+    menu_links[i].addEventListener('click', () => addOrder(content_items[i]));
+  }
 }
+/*конец Выбираем ссылки для основного контента и вешаем обработчик событий*/
 
-if (document.getElementById('content__menu-link2') &&
-    document.getElementById('content__item2')) {
-    const menu_link2 = document.getElementById('content__menu-link2');
-    const item2 = document.getElementById('content__item2');
-    menu_link2.addEventListener('click', () => addOrder(item2));
-}
-
-if (document.getElementById('content__menu-link3') &&
-    document.getElementById('content__item3')) {
-    const menu_link3 = document.getElementById('content__menu-link3');
-    const item3 = document.getElementById('content__item3');
-    menu_link3.addEventListener('click', () => addOrder(item3));
-}
-
-if (document.getElementById('content__menu-link4') &&
-    document.getElementById('content__item4')) {
-    const menu_link4 = document.getElementById('content__menu-link4');
-    const item4 = document.getElementById('content__item4');
-    menu_link4.addEventListener('click', () => addOrder(item4));
-}
-
-if (document.getElementById('content__menu-link5') &&
-    document.getElementById('content__item5')) {
-    const menu_link5 = document.getElementById('content__menu-link5');
-    const item5 = document.getElementById('content__item5');
-    menu_link5.addEventListener('click', () => addOrder(item5));
-}
-
-if (document.getElementById('content__menu-link6') &&
-    document.getElementById('content__item6')) {
-    const menu_link6 = document.getElementById('content__menu-link6');
-    const item6 = document.getElementById('content__item6');
-    menu_link6.addEventListener('click', () => addOrder(item6));
-}
-
-if (document.getElementById('content__menu-link7') &&
-    document.getElementById('content__item7')) {
-    const menu_link7 = document.getElementById('content__menu-link7');
-    const item7 = document.getElementById('content__item7');
-    menu_link7.addEventListener('click', () => addOrder(item7));
-}
-
-if (document.getElementById('content__menu-link8') &&
-    document.getElementById('content__item8')) {
-    const menu_link8 = document.getElementById('content__menu-link8');
-    const item8 = document.getElementById('content__item8');
-    menu_link8.addEventListener('click', () => addOrder(item8));
-}
-
-/*************Content*/
 /****************
 Скрипт из файла player.js
 *******************/
@@ -225,14 +179,16 @@ const belStanice = document.querySelector('#content__item2');
 const srbStanice = document.querySelector('#content__item3');
 const hrvStanice = document.querySelector('#content__item4');
 const bihStanice = document.querySelector('#content__item5');
-const srbStanice1 = document.querySelector('#content__item6');
-const hrvStanice1 = document.querySelector('#content__item7');
-const bihStanice1 = document.querySelector('#content__item8');
+const indStanice = document.querySelector('#content__item6');
+const srbStanice1 = document.querySelector('#content__item7');
+const hrvStanice1 = document.querySelector('#content__item8');
+const bihStanice1 = document.querySelector('#content__item9');
 
 
 /*Создадим переменную для папки где лежат картинки*/
 const logoPath = 'assets/img/radio/';
-
+/*Создадим переменную для https адреса http потока*/
+const httpToHttps = 'https://cors.bitwize.com.lb/';
 
 /*Создадим класс для объектов для радиостанций*/
 class Station {
@@ -260,6 +216,8 @@ const dataHrvatska = [];
 const elemDataHrvatska = [];
 const dataBiH = [];
 const elemDataBiH = [];
+const dataInd = [];
+const elemDataInd = [];
 
 
 //Делаем запрос на получение json
@@ -294,6 +252,9 @@ request.onload = () => {
         break;
       case 'BiH':
         dataBiH.push(dataStations[i]);
+        break;
+      case 'India':
+        dataInd.push(dataStations[i]);
         break;
     }
   }
@@ -358,6 +319,18 @@ request.onload = () => {
   }
   console.log('Данные радиостанций из Боснии', dataBiH);
 
+  //Для каждой станции из Индии создаем кнопку
+  for(let i = 0; i < dataInd.length; i++) {
+    elemDataInd[i] = document.createElement('div');
+    elemDataInd[i].className = "stanica";
+    elemDataInd[i].innerHTML = dataInd[i].title;
+    indStanice.appendChild(elemDataInd[i]);
+
+    //И вешаем на эту кнопку обработчик клика
+    elemDataInd[i].addEventListener('click', () => setRadio(dataInd[i]));
+  }
+  console.log('Данные радиостанций из Индии', dataInd);
+
 }
 
 /*В файле stations1.json радиостанции http*/
@@ -411,7 +384,7 @@ request1.onload = () => {
     srbStanice1.appendChild(elemDataSrbija1[i]);
 
     //И вешаем на эту кнопку обработчик клика
-    elemDataSrbija1[i].addEventListener('click', () => setRadio(dataSrbija1[i]));
+    elemDataSrbija1[i].addEventListener('click', () => setRadio1(dataSrbija1[i]));
   }
   console.log('Данные радиостанций из Сербии', dataSrbija1);
 
@@ -423,7 +396,7 @@ request1.onload = () => {
     hrvStanice1.appendChild(elemDataHrvatska1[i]);
 
     //И вешаем на эту кнопку обработчик клика
-    elemDataHrvatska1[i].addEventListener('click', () => setRadio(dataHrvatska1[i]));
+    elemDataHrvatska1[i].addEventListener('click', () => setRadio1(dataHrvatska1[i]));
   }
   console.log('Данные радиостанций из Хорватии', dataHrvatska1);
 
@@ -435,7 +408,7 @@ request1.onload = () => {
     bihStanice1.appendChild(elemDataBiH1[i]);
 
     //И вешаем на эту кнопку обработчик клика
-    elemDataBiH1[i].addEventListener('click', () => setRadio(dataBiH1[i]));
+    elemDataBiH1[i].addEventListener('click', () => setRadio1(dataBiH1[i]));
   }
   console.log('Данные радиостанций из Боснии', dataBiH1);
 
@@ -462,6 +435,22 @@ const setRadio = (station) => {
   // streamDisable.style.display = "none";
 }
 
+/*****************
+Функция setRadio записывает данные в плеер http
+*****************/
+const setRadio1 = (station) => {
+  audio1.setAttribute('src', httpToHttps + station.stream);
+  radioLogo.setAttribute('src', station.logo);
+  radioSite.href = (station.site);
+  radioSite.title = (station.site);
+  radioTitle.innerHTML = (station.title);
+  radioCountry.innerHTML = (station.country);
+
+  audio1.play();
+  //changePlayBtn();
+  console.info(station);
+  // streamDisable.style.display = "none";
+}
 /****************
 Скрипт из файла theme.js
 *******************/
