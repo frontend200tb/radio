@@ -243,5 +243,89 @@
     "stream" : "https://radio8-bhcloud.radioca.st/1.mp3",
     "logo" : "bih-8.png",
     "site" : "https://radio8.ba/"
+  },
+  {
+    "title" : "Gup Shup 94.3 FM Assam",
+    "country" : "India",
+    "stream" : "https://cors.bitwize.com.lb/http://103.95.48.18:8080/;",
+    "logo" : "ind-gup-shup.png",
+    "site" : "https://radiogupshup.com/"
+  },
+  {
+    "title" : "Radio Mirchi 98.3FM",
+    "country" : "India",
+    "stream" : "https://stream-56.zeno.fm/20g8vnc5mp8uv",
+    "logo" : "ind-mirchi.jpg",
+    "site" : "https://mirchi.in/"
+  },
+  {
+    "title" : "Big FM 106.2",
+    "country" : "India",
+    "stream" : "https://funasia.streamguys1.com/live4",
+    "logo" : "ind-bigfm.jpg",
+    "site" : "https://radiosindia.com/bigfm.html"
+  },
+  {
+    "title" : "Radio City 91.1FM",
+    "country" : "India",
+    "stream" : "https://stream-64.zeno.fm/pxc55r5uyc9uv",
+    "logo" : "ind-city.jpg",
+    "site" : "https://radiosindia.com/radiocityhindi.html"
+  },
+  {
+    "title" : "Spice FM UK 98.8",
+    "country" : "India",
+    "stream" : "https://spice988fm.radioca.st/stream",
+    "logo" : "ind-spicefmuk.jpg",
+    "site" : "https://radiosindia.com/spicefmuk.html"
+  },
+  {
+    "title" : "Radio Caravan",
+    "country" : "India",
+    "stream" : "https://stream.voxx.pro/radio/8260/radio.mp3",
+    "logo" : "ind-caravan.jpg",
+    "site" : "https://radiosindia.com/radiocaravan.html"
+  },
+  {
+    "title" : "Radio Olive 106.3FM",
+    "country" : "India",
+    "stream" : "https://playerservices.streamtheworld.com/api/livestream-redirect/OLIVE1063.mp3",
+    "logo" : "ind-olive.jpg",
+    "site" : "https://radiosindia.com/radioolive.html"
+  },
+  {
+    "title" : "Radio Shruti",
+    "country" : "India",
+    "stream" : "https://rs.suricloud.com/radio/8000/radio.mp3",
+    "logo" : "ind-shruti.jpg",
+    "site" : "https://radiosindia.com/radioshruti.html"
+  },
+  {
+    "title" : "Radio Namkin",
+    "country" : "India",
+    "stream" : "https://stream.zeno.fm/yg1qhsbaqv5tv",
+    "logo" : "ind-namkin.jpg",
+    "site" : "https://radiosindia.com/radionamkin.html"
+  },
+  {
+    "title" : "Desi Bollywood",
+    "country" : "India",
+    "stream" : "https://www.desizoneradio.com/relay2",
+    "logo" : "ind-desibollywood.jpg",
+    "site" : "https://radiosindia.com/desibollywood.html"
+  },
+  {
+    "title" : "EBC Radio 1170AM",
+    "country" : "India",
+    "stream" : "https://ice7.securenetsystems.net/WWTR?",
+    "logo" : "ind-ebc.jpg",
+    "site" : "https://radiosindia.com/ebcradio.html"
+  },
+  {
+    "title" : "Radio Badal",
+    "country" : "India",
+    "stream" : "https://stream.zeno.fm/nhrtcxg09u8uv",
+    "logo" : "ind-badal.jpg",
+    "site" : "https://radiosindia.com/radiobadal.html"
   }
 ]
