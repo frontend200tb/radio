@@ -8,127 +8,98 @@
     <meta name="description" content="Online radio created in 200TB Web Studio">
     <meta name="keywords" content="online radio">
     <title>Online Radio Serbia</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/favicon.png">
-  </head>
+  <link rel="icon" href="favicon.png"><script defer src="index.js"></script><link href="style.css" rel="stylesheet"></head>
   <body>
     <div class="page snow" id="page">
       <header class="header container">
-        <div class="header__first-row">
-          
-          <img class="header-logo" src="assets/img/logo.png" alt="200Terabyte Web Studio logo">
-          
-        </div>
-        <div class="header__second-row">
-          <div class="social" id="social">
-            
-            <a class="social__icon social__icon_wa" href="https://wa.me/79507658158" title="WhatsApp" target="_blank"></a>
-            <a class="social__icon social__icon_vk" href="https://vk.com/benchpress250" title="ВКонтакте" target="_blank"></a>
-            <a class="social__icon social__icon_tg" href="https://t.me/Frontend200tb" title="Telegram" target="_blank"></a>
-            <a class="social__icon social__icon_ig" href="https://www.instagram.com/frontend200tb/" title="Instagram" target="_blank"></a>
-            <a class="social__icon social__icon_github" href="https://github.com/frontend200tb" title="GitHub" target="_blank"></a>
-            <a class="social__icon social__icon_cp" href="https://codepen.io/ivan200tb/" title="Codepen" target="_blank"></a>
-            <a class="social__icon social__icon_cw" href="https://www.codewars.com/users/frontend200tb" title="Codewars" target="_blank"></a>
-            <a class="social__icon social__icon_replit" href="https://replit.com/@frontend200tb" title="Repl.it" target="_blank"></a>
-            <a class="social__icon social__icon_yt" href="https://www.youtube.com/channel/UCxQkWhcXUes0CdxvJH3B7Ug" title="Youtube" target="_blank"></a>
-            <a class="social__icon social__icon_fb" href="https://www.facebook.com/frontend200tb" title="Facebook" target="_blank"></a>
-            <a class="social__icon social__icon_tw" href="https://twitter.com/frontend200tb" title="Twitter" target="_blank"></a>
-            
-            <div class="theme" id="theme"></div>
-          </div>
-        </div>
+<div class="header__first-row">
+
+<img class="header-logo" src="static/img/logo.png" alt="200Terabyte Web Studio logo">
+
+</div>
+<div class="header__second-row">
+<div class="social" id="social">
+
+<a class="social__icon social__icon_wa" href="https://wa.me/79507658158" title="WhatsApp" target="_blank"></a>
+<a class="social__icon social__icon_vk" href="https://vk.com/benchpress250" title="ВКонтакте" target="_blank"></a>
+<a class="social__icon social__icon_tg" href="https://t.me/Frontend200tb" title="Telegram" target="_blank"></a>
+<a class="social__icon social__icon_ig" href="https://www.instagram.com/frontend200tb/" title="Instagram" target="_blank"></a>
+<a class="social__icon social__icon_github" href="https://github.com/frontend200tb" title="GitHub" target="_blank"></a>
+<a class="social__icon social__icon_cp" href="https://codepen.io/ivan200tb/" title="Codepen" target="_blank"></a>
+<a class="social__icon social__icon_cw" href="https://www.codewars.com/users/frontend200tb" title="Codewars" target="_blank"></a>
+<a class="social__icon social__icon_replit" href="https://replit.com/@frontend200tb" title="Repl.it" target="_blank"></a>
+<a class="social__icon social__icon_yt" href="https://www.youtube.com/channel/UCxQkWhcXUes0CdxvJH3B7Ug" title="Youtube" target="_blank"></a>
+<a class="social__icon social__icon_fb" href="https://www.facebook.com/frontend200tb" title="Facebook" target="_blank"></a>
+<a class="social__icon social__icon_tw" href="https://twitter.com/frontend200tb" title="Twitter" target="_blank"></a>
+
+<div class="theme" id="theme"></div>
+</div>
+</div>
       </header>
-      <main class="main container">
-        <section class="main__section">
-          <h1>Online Radio Serbia</h1>
-          <article class="player">
-            <audio src="https://mastermedia.shoutca.st/proxy/prviradions?mp=/stream"></audio>
-            <div class="player-time">
-              <button class="play-btn"></button>
-              <div class="time-num">00:00</div>
-              <button class="stop-btn"></button>
-            </div>
-            <div class="player-volume">
-              <button class="speaker-btn"></button>
-              <div class="volume-num">100</div>
-              <input class="volume-range" type="range" min="0" max="100" value="100">
-            </div>
-            <div class="marquee" id="stream-disable"><span>stream disable at the moment</span></div>
-          </article>
-          <hr>
-          <article class="listen-radio">
-            <h2>Listen online radio</h2><a id="radio__site" href="https://prviradio.rs/radiochannel/prvi-radio-novi-sad/" title="https://prviradio.rs/radiochannel/prvi-radio-novi-sad/" target="_blank"><img class="radio__logo" id="radio__logo" src="assets/img/radio/srb-prvi-novi-sad.png" alt="logo Prvi Radio Novi Sad"></a>
-            <div class="radio__description">
-              <div id="radio__title">Prvi Radio Novi Sad</div>
-              <div id="radio__country">Srbija</div>
-            </div>
-          </article>
-          <hr>
+      <main>
+        <h1>Online Radio</h1>
+        <article class="player">
+<audio src="https://mastermedia.shoutca.st/proxy/prviradions?mp=/stream"></audio>
+<div class="player-time">
+  <button class="play-btn"></button>
+  <div class="time-num">00:00</div>
+  <button class="stop-btn"></button>
+</div>
+<div class="player-volume">
+  <button class="speaker-btn"></button>
+  <div class="volume-num">100</div>
+  <input class="volume-range" type="range" min="0" max="100" value="100">
+</div>
+<div class="marquee" id="stream-disable"><span>stream disable at the moment</span></div>
+        </article>
+        <article class="listen-radio"><a id="radio__site" href="https://prviradio.rs/radiochannel/prvi-radio-novi-sad/" title="https://prviradio.rs/radiochannel/prvi-radio-novi-sad/" target="_blank"><img class="radio__logo" id="radio__logo" src="static/img/radio/srb-prvi-novi-sad.png" alt="logo Prvi Radio Novi Sad"></a>
+<div class="radio__description">
+  <div id="radio__title">Prvi Radio Novi Sad</div>
+  <div id="radio__country">Srbija</div>
+</div>
+        </article>
+        <section class="main">
           <article class="select-country">
-            <h2>Select country</h2>
-            <div class="content__menu">
-              <div class="content__menu-link" id="content__menu-link1">Россия</div>
-              <div class="content__menu-link" id="content__menu-link2">Беларусь</div>
-              <div class="content__menu-link" id="content__menu-link3">Srbija</div>
-              <div class="content__menu-link" id="content__menu-link4">Hrvatska</div>
-              <div class="content__menu-link" id="content__menu-link5">BiH</div>
-              <div class="content__menu-link" id="content__menu-link6">India</div>
-            </div>
-            <div class="content__menu">
-              <div class="content__menu-link" id="content__menu-link7">http Srbija</div>
-              <div class="content__menu-link" id="content__menu-link8">http Hrvatska</div>
-              <div class="content__menu-link" id="content__menu-link9">http BiH</div>
-            </div>
+<h3 class="country-title">Country </h3>
+<div class="content__menu">
+  <div class="content__menu-link" id="content__menu-link1">Россия</div>
+  <div class="content__menu-link" id="content__menu-link2">Беларусь</div>
+  <div class="content__menu-link" id="content__menu-link3">Srbija</div>
+  <div class="content__menu-link" id="content__menu-link4">Hrvatska</div>
+  <div class="content__menu-link" id="content__menu-link5">BiH</div>
+  <div class="content__menu-link" id="content__menu-link6">India</div>
+</div>
           </article>
-        </section>
-        <section class="main__section">
-          <h2>Select radio station</h2>
-          <div class="content__items">
-            <div class="content__item" id="content__item1">
-              <h3 class="country-title">Россия</h3>
-            </div>
-            <div class="content__item" id="content__item2">
-              <h3 class="country-title">Беларусь</h3>
-            </div>
-            <div class="content__item" id="content__item3">
-              <h3 class="country-title">Srbija</h3>
-            </div>
-            <div class="content__item" id="content__item4">
-              <h3 class="country-title">Hrvatska</h3>
-            </div>
-            <div class="content__item" id="content__item5">
-              <h3 class="country-title">BiH</h3>
-            </div>
-            <div class="content__item" id="content__item6">
-              <h3 class="country-title">India</h3>
-            </div>
-          </div>
-          <hr>
-          <div class="up"><a href="#header">Up</a></div>
-          <hr>
-        </section>
-        <section class="main__section">
-          <h2>Select radio station</h2>
-          <div class="content__items">
-            <div class="content__item" id="content__item7">
-              <h3 class="country-title">http Serbia</h3>
-            </div>
-            <div class="content__item" id="content__item8">
-              <h3 class="country-title">http Hrvatska</h3>
-            </div>
-            <div class="content__item" id="content__item9">
-              <h3 class="country-title">http BiH</h3>
-            </div>
-          </div>
-          <hr>
-          <div class="up"><a href="#header">Up</a></div>
-          <hr>
+          <section class="select-radio">
+<div class="content__items">
+  <div class="content__item" id="content__item1">
+    <h3 class="country-title">Россия</h3>
+  </div>
+  <div class="content__item" id="content__item2">
+    <h3 class="country-title">Беларусь</h3>
+  </div>
+  <div class="content__item" id="content__item3">
+    <h3 class="country-title">Srbija</h3>
+  </div>
+  <div class="content__item" id="content__item4">
+    <h3 class="country-title">Hrvatska</h3>
+  </div>
+  <div class="content__item" id="content__item5">
+    <h3 class="country-title">BiH</h3>
+  </div>
+  <div class="content__item" id="content__item6">
+    <h3 class="country-title">India</h3>
+  </div>
+</div>
+<hr>
+<div class="up"><a href="#page">Up</a></div>
+<hr>
+          </section>
         </section>
       </main>
       <footer class="footer container">
-        <div class="footer-title">Created in <a href="https://frontend200tb.github.io/start/" target="_blank">200TERABYTE Web Studio</a></div>
+<div class="footer-title">Created in <a href="https://frontend200tb.github.io/start/" target="_blank">200TERABYTE Web Studio</a></div>
       </footer>
     </div>
-    <script src="js/index.js"></script>
   </body>
 </html>
