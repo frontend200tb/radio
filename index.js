@@ -1,282 +1,769 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/components/player/player.js":
+/***/ "./src/components/footer/element-footer.js":
+/*!*************************************************!*\
+  !*** ./src/components/footer/element-footer.js ***!
+  \*************************************************/
+/***/ (() => {
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+var Footer = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(Footer, _HTMLElement);
+  var _super = _createSuper(Footer);
+  function Footer() {
+    _classCallCheck(this, Footer);
+    return _super.call(this);
+  }
+  _createClass(Footer, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.innerHTML = "\n    <footer class=\"footer container\">\n      <div class=\"footer-title\">\n        Created in <a href=\"https://frontend200tb.github.io/start/\" target=\"_blank\">200TERABYTE WEB STUDIO</a>\n      </div>\n    </footer>\n    ";
+    }
+  }]);
+  return Footer;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+customElements.define('footer-component', Footer);
+
+/***/ }),
+
+/***/ "./src/components/footer/footer.js":
 /*!*****************************************!*\
-  !*** ./src/components/player/player.js ***!
+  !*** ./src/components/footer/footer.js ***!
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "tryPlay": () => (/* binding */ tryPlay)
-/* harmony export */ });
-/* harmony import */ var _js_const_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../js/const.js */ "./src/js/const.js");
-/****************
-Скрипт из файла player.js
-*******************/
+/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.scss */ "./src/components/footer/footer.scss");
+/* harmony import */ var _element_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./element-footer */ "./src/components/footer/element-footer.js");
+/* harmony import */ var _element_footer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_element_footer__WEBPACK_IMPORTED_MODULE_1__);
 
 
-var timeNum = document.querySelector(".time-num");
-var stopBtn = document.querySelector(".stop-btn");
-var repeatBtn = document.querySelector(".repeat-btn");
-var speakerBtn = document.querySelector(".speaker-btn");
-var volumeNum = document.querySelector(".volume-num");
-var volumeRange = document.querySelector(".volume-range");
-var streamDisable = document.getElementById("stream-disable");
-
-/*******************
-Play
-*******************/
-function tryPlay() {
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.playBtn.classList.add('pause');
-  streamDisable.style.display = "none";
-  try {
-    _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.play();
-  } catch (err) {
-    _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.pause();
-    _js_const_js__WEBPACK_IMPORTED_MODULE_0__.playBtn.classList.remove('pause');
-    streamDisable.style.display = "block";
-    console.log(err);
-  }
-}
-
-/*******************
-Кнопка Play
-*******************/
-function clickPlay() {
-  if (_js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.paused) {
-    tryPlay();
-  } else {
-    _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.pause();
-    _js_const_js__WEBPACK_IMPORTED_MODULE_0__.playBtn.classList.remove('pause');
-  }
-  ;
-}
-function changePlayBtn() {
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.paused ? _js_const_js__WEBPACK_IMPORTED_MODULE_0__.playBtn.classList.remove('pause') : _js_const_js__WEBPACK_IMPORTED_MODULE_0__.playBtn.classList.add('pause');
-}
-_js_const_js__WEBPACK_IMPORTED_MODULE_0__.playBtn.addEventListener('click', function () {
-  clickPlay();
-});
-
-/*******************
-Кнопка Stop
-*******************/
-function clickStop() {
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.pause();
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.setAttribute('src', _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.src);
-}
-function stopPlayBtn() {
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.playBtn.classList.remove('pause');
-}
-stopBtn.addEventListener('click', function () {
-  clickStop();
-  stopPlayBtn();
-});
-
-/*******************
-Кнопка Repeat
-*******************/
-function clickRepeat() {
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.pause();
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.currentTime = 0;
-}
-repeatBtn.addEventListener('click', function () {
-  clickRepeat();
-  stopPlayBtn();
-});
-
-/*******************
-Ошибка если поток не загрузился
-*******************/
-function audioError() {
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.pause();
-  changePlayBtn();
-  streamDisable.style.display = "block";
-}
-_js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.addEventListener('error', audioError);
-
-/*******************
-Вычисление времени воспроизведения
-*******************/
-_js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.ontimeupdate = function () {
-  var sec_num = _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.currentTime;
-  var hours = Math.floor(sec_num / 3600);
-  var minutes = Math.floor((sec_num - hours * 3600) / 60);
-  var seconds = sec_num - hours * 3600 - minutes * 60;
-  seconds = Math.round(seconds);
-  if (hours < 10) {
-    hours = "0" + hours;
-  }
-  if (minutes < 10) {
-    minutes = "0" + minutes;
-  }
-  if (seconds < 10) {
-    seconds = "0" + seconds;
-  }
-  timeNum.innerHTML = minutes + ':' + seconds;
-};
-
-/*******************
-Кнопка вкл/выкл громкости
-*******************/
-var currentVolume = Number(volumeNum.innerHTML);
-
-// Изменение кнопки вкл/выкл громкости
-var changeSpeakerBtn = function changeSpeakerBtn() {
-  return speakerBtn.classList.toggle('mute');
-};
-
-// Клик на кнопке вкл/выкл громкости
-var clickVolume = function clickVolume() {
-  if (volumeRange.value == 0) {
-    volumeRange.value = currentVolume;
-    _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.volume = volumeRange.value / 100;
-    volumeNum.innerHTML = volumeRange.value;
-  } else {
-    currentVolume = volumeRange.value;
-    volumeRange.value = 0;
-    _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.volume = 0;
-    volumeNum.innerHTML = volumeRange.value;
-  }
-  changeSpeakerBtn();
-};
-
-// Клик на кнопке вкл/выкл громкости
-speakerBtn.addEventListener('click', clickVolume);
-
-/*******************
-Изменение регулятора громкости
-*******************/
-var changeVolume = function changeVolume() {
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.audio.volume = volumeRange.value / 100;
-  volumeNum.innerHTML = volumeRange.value;
-  if (volumeRange.value == 0 && !speakerBtn.classList.contains('mute')) {
-    speakerBtn.classList.add('mute');
-  }
-  if (volumeRange.value != 0 && speakerBtn.classList.contains('mute')) {
-    speakerBtn.classList.remove('mute');
-  }
-};
-
-// Изменение регулятора громкости
-volumeRange.addEventListener('change', changeVolume);
 
 /***/ }),
 
-/***/ "./src/components/snow/snow.js":
-/*!*************************************!*\
-  !*** ./src/components/snow/snow.js ***!
-  \*************************************/
+/***/ "./src/components/header/element-header.js":
+/*!*************************************************!*\
+  !*** ./src/components/header/element-header.js ***!
+  \*************************************************/
+/***/ (() => {
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+var Header = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(Header, _HTMLElement);
+  var _super = _createSuper(Header);
+  function Header() {
+    _classCallCheck(this, Header);
+    return _super.call(this);
+  }
+  _createClass(Header, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.innerHTML = "\n    <header class=\"header container\" id=\"header\">\n\n      <div class=\"header__first-row\">\n        <img class=\"header-logo\" src=\"static/img/logo.png\" alt=\"200Terabyte Web Studio logo\">\n      </div>\n\n      <div class=\"header__second-row\">\n        <social-icons></social-icons>\n        <div class=\"settings\">\n          <theme-btn></theme-btn>\n          <snow-btn></snow-btn>\n        </div>\n      </div>\n\n    </header>\n    ";
+    }
+  }]);
+  return Header;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+customElements.define('header-component', Header);
+
+/***/ }),
+
+/***/ "./src/components/header/header.js":
+/*!*****************************************!*\
+  !*** ./src/components/header/header.js ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _js_const_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../js/const.js */ "./src/js/const.js");
+/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header.scss */ "./src/components/header/header.scss");
+/* harmony import */ var _element_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./element-header */ "./src/components/header/element-header.js");
+/* harmony import */ var _element_header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_element_header__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _social_icons_social_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./social-icons/social-icons */ "./src/components/header/social-icons/social-icons.js");
+/* harmony import */ var _theme_theme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./theme/theme */ "./src/components/header/theme/theme.js");
+/* harmony import */ var _snow_snow__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./snow/snow */ "./src/components/header/snow/snow.js");
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/components/header/snow/snow.js":
+/*!********************************************!*\
+  !*** ./src/components/header/snow/snow.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _snow_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_snow.scss */ "./src/components/header/snow/_snow.scss");
+/* harmony import */ var _online_radio_js_const_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../online-radio/js/const.js */ "./src/components/online-radio/js/const.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 /****************
 Скрипт из файла snow.js
 *******************/
-
 /* Алгоритм работы
-1. По нажатию на кнопку с id="setSnow" будем запускать функции changeSnow() и saveSnow()
-2. Функция changeSnow() добавит class="snow" к элементу page если его не было и наоборот
-3. Функция saveSnow() сохранит настройки снега в localStorage
-4. При загрузке страницы настройки снега выбираются из localStorage, если нет то по умолчанию снег идет
+1. Создаем касс SnowBtn
+2. Добавляем элемент snow-btn (экземпляр класса SnowBtn) в customElements
 */
 
 
-var setSnow = document.querySelector('#setSnow');
-function changeSnow() {
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.page.classList.toggle('snow');
-}
-function saveSnow() {
-  currentSnow = _js_const_js__WEBPACK_IMPORTED_MODULE_0__.page.classList.contains("snow") ? 'snow' : 'false';
-  localStorage.setItem("snow", currentSnow);
-}
-setSnow.addEventListener('click', function () {
-  changeSnow();
-  saveSnow();
-});
 
-// Выбираем настройки снега из localStorage
-var currentSnow = localStorage.getItem('snow') || 'snow';
-if (currentSnow == 'snow') {
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.page.classList.add("snow");
-}
+
+//1. Создаем касс SnowBtn
+var SnowBtn = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(SnowBtn, _HTMLElement);
+  var _super = _createSuper(SnowBtn);
+  function SnowBtn() {
+    var _this;
+    _classCallCheck(this, SnowBtn);
+    _this = _super.call(this);
+    _this.addEventListener('click', function () {
+      snowToggle();
+      saveSnow();
+    });
+    function snowToggle() {
+      _online_radio_js_const_js__WEBPACK_IMPORTED_MODULE_1__.page.classList.toggle('snow');
+    }
+
+    //Функция saveSnow() сохранит настройки снега в localStorage
+    function saveSnow() {
+      currentSnow = _online_radio_js_const_js__WEBPACK_IMPORTED_MODULE_1__.page.classList.contains("snow") ? 'snow' : 'net';
+      localStorage.setItem("snow", currentSnow);
+    }
+
+    //Берем настройки из localStorage, если их нет то пусть будет снег
+    var currentSnow = localStorage.getItem('snow') || 'snow';
+    if (currentSnow == 'snow') {
+      _online_radio_js_const_js__WEBPACK_IMPORTED_MODULE_1__.page.classList.add("snow");
+    }
+    return _this;
+  }
+  _createClass(SnowBtn, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.innerHTML = "\n    <div id=\"snow_btn\" class=\"snow_btn\"></div>\n    ";
+    }
+  }]);
+  return SnowBtn;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement)); //2. Добавляем элемент snow-btn (экземпляр класса SnowBtn) в customElements
+customElements.define('snow-btn', SnowBtn);
 
 /***/ }),
 
-/***/ "./src/components/theme/theme.js":
-/*!***************************************!*\
-  !*** ./src/components/theme/theme.js ***!
-  \***************************************/
+/***/ "./src/components/header/social-icons/social-icons.js":
+/*!************************************************************!*\
+  !*** ./src/components/header/social-icons/social-icons.js ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _js_const_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../js/const.js */ "./src/js/const.js");
-/****************
-Скрипт из файла theme.js
-*******************/
+/* harmony import */ var _social_icons_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_social-icons.scss */ "./src/components/header/social-icons/_social-icons.scss");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-/* Алгоритм работы
-1. По нажатию на кнопку с id="theme" будем запускать функции changeTheme() и saveTheme()
-2. Функция changeTheme() добавит class="dark-theme" к элементу page если его не было и наоборот
-3. Функция saveTheme() сохранит выбранную тему в localStorage
-4. При загрузке страницы тема выбирается из localStorage, если нет то по умолчанию тема темная
-*/
-
-
-var theme = document.querySelector('#theme');
-function changeTheme() {
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.page.classList.toggle('dark-theme');
-}
-function saveTheme() {
-  currentTheme = _js_const_js__WEBPACK_IMPORTED_MODULE_0__.page.classList.contains("dark-theme") ? "dark" : "light";
-  localStorage.setItem("theme", currentTheme);
-}
-theme.addEventListener('click', function () {
-  changeTheme();
-  saveTheme();
-});
-
-// Выбираем настройки темы из localStorage
-var currentTheme = localStorage.getItem('theme') || 'dark';
-if (currentTheme == 'dark') {
-  _js_const_js__WEBPACK_IMPORTED_MODULE_0__.page.classList.add("dark-theme");
-}
+var SocialIcons = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(SocialIcons, _HTMLElement);
+  var _super = _createSuper(SocialIcons);
+  function SocialIcons() {
+    _classCallCheck(this, SocialIcons);
+    return _super.call(this);
+  }
+  _createClass(SocialIcons, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.innerHTML = "\n    <div class=\"social\" id=\"social\">\n      <a class=\"social__icon social__icon_wa\" href=\"https://wa.me/79507658158\") title=\"WhatsApp\" target=\"_blank\"></a>\n    \n      <a class=\"social__icon social__icon_vk\" href=\"https://vk.com/benchpress250\" title=\"\u0412\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u0435\" target=\"_blank\"></a>\n    \n      <a class=\"social__icon social__icon_tg\" href=\"https://t.me/Frontend200tb\" title=\"Telegram\" target=\"_blank\"></a>\n    \n      <a class=\"social__icon social__icon_ig\" href=\"https://www.instagram.com/frontend200tb/\" title=\"Instagram\" target=\"_blank\"></a>\n    \n      <a class=\"social__icon social__icon_github\" href=\"https://github.com/frontend200tb\" title=\"GitHub\" target=\"_blank\"></a>\n    \n      <a class=\"social__icon social__icon_cp\" href=\"https://codepen.io/ivan200tb/\" title=\"Codepen\" target=\"_blank\"></a>\n    \n      <a class=\"social__icon social__icon_cw\" href=\"https://www.codewars.com/users/frontend200tb\" title=\"Codewars\" target=\"_blank\"></a>\n    \n      <a class=\"social__icon social__icon_replit\" href=\"https://replit.com/@frontend200tb\" title=\"Repl.it\" target=\"_blank\"></a>\n    \n      <a class=\"social__icon social__icon_yt\" href=\"https://www.youtube.com/channel/UCxQkWhcXUes0CdxvJH3B7Ug\" title=\"Youtube\" target=\"_blank\"></a>\n    \n      <a class=\"social__icon social__icon_fb\" href=\"https://www.facebook.com/frontend200tb\" title=\"Facebook\" target=\"_blank\"></a>\n    \n      <a class=\"social__icon social__icon_tw\" href=\"https://twitter.com/frontend200tb\" title=\"Twitter\" target=\"_blank\"></a>  \n    </div>\n    ";
+    }
+  }]);
+  return SocialIcons;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+customElements.define('social-icons', SocialIcons);
 
 /***/ }),
 
-/***/ "./src/js/const.js":
-/*!*************************!*\
-  !*** ./src/js/const.js ***!
-  \*************************/
+/***/ "./src/components/header/theme/theme.js":
+/*!**********************************************!*\
+  !*** ./src/components/header/theme/theme.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _theme_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_theme.scss */ "./src/components/header/theme/_theme.scss");
+/* harmony import */ var _online_radio_js_const_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../online-radio/js/const.js */ "./src/components/online-radio/js/const.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+/****************
+Скрипт из файла theme.js
+*******************/
+/* Алгоритм работы
+1. Создаем касс ThemeBtn
+2. Добавляем элемент theme-btn (экземпляр класса ThemeBtn) в customElements
+*/
+
+
+
+
+//1. Создаем касс ThemeBtn
+var ThemeBtn = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(ThemeBtn, _HTMLElement);
+  var _super = _createSuper(ThemeBtn);
+  function ThemeBtn() {
+    var _this;
+    _classCallCheck(this, ThemeBtn);
+    _this = _super.call(this);
+    _this.addEventListener('click', function () {
+      themeToggle();
+      saveTheme();
+    });
+    function themeToggle() {
+      _online_radio_js_const_js__WEBPACK_IMPORTED_MODULE_1__.page.classList.toggle('dark-theme');
+    }
+
+    //Функция saveTheme() сохранит настройки темы в localStorage
+    function saveTheme() {
+      currentTheme = _online_radio_js_const_js__WEBPACK_IMPORTED_MODULE_1__.page.classList.contains("dark-theme") ? "dark" : "light";
+      localStorage.setItem("theme", currentTheme);
+    }
+
+    //Берем настройки из localStorage, если их нет то пусть будет снег будет темная тема
+    var currentTheme = localStorage.getItem('theme') || 'dark';
+    if (currentTheme == 'dark') {
+      _online_radio_js_const_js__WEBPACK_IMPORTED_MODULE_1__.page.classList.add("dark-theme");
+    }
+    return _this;
+  }
+  _createClass(ThemeBtn, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.innerHTML = "\n    <div id=\"theme_btn\" class=\"theme_btn\"></div>\n    ";
+    }
+  }]);
+  return ThemeBtn;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement)); //2. Добавляем элемент theme-btn (экземпляр класса ThemeBtn) в customElements
+customElements.define('theme-btn', ThemeBtn);
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/listen-radio/element-listen-radio.js":
+/*!*************************************************************************************!*\
+  !*** ./src/components/online-radio/components/listen-radio/element-listen-radio.js ***!
+  \*************************************************************************************/
+/***/ (() => {
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+var ListenRadio = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(ListenRadio, _HTMLElement);
+  var _super = _createSuper(ListenRadio);
+  function ListenRadio() {
+    _classCallCheck(this, ListenRadio);
+    return _super.call(this);
+  }
+  _createClass(ListenRadio, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.innerHTML = "\n    <article class=\"listen-radio\">\n      <a id=\"radio__site\" href=\"https://prviradio.rs/radiochannel/prvi-radio-novi-sad/\" title=\"https://prviradio.rs/radiochannel/prvi-radio-novi-sad/\" target=\"_blank\"><img class=\"radio__logo\" id=\"radio__logo\" src=\"static/img/radio/srb-prvi-novi-sad.png\" alt=\"logo Prvi Radio Novi Sad\"></a>\n      <div class=\"radio__description\">\n        <div id=\"radio__title\">Prvi Radio Novi Sad</div>\n        <div id=\"radio__country\">Srbija</div>\n      </div>\n    </article>\n    ";
+    }
+  }]);
+  return ListenRadio;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+customElements.define('listen-radio', ListenRadio);
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/listen-radio/listen-radio.js":
+/*!*****************************************************************************!*\
+  !*** ./src/components/online-radio/components/listen-radio/listen-radio.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _listen_radio_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./listen-radio.scss */ "./src/components/online-radio/components/listen-radio/listen-radio.scss");
+/* harmony import */ var _element_listen_radio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./element-listen-radio */ "./src/components/online-radio/components/listen-radio/element-listen-radio.js");
+/* harmony import */ var _element_listen_radio__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_element_listen_radio__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/player/_player.js":
+/*!******************************************************************!*\
+  !*** ./src/components/online-radio/components/player/_player.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _player_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_player.scss */ "./src/components/online-radio/components/player/_player.scss");
+/* harmony import */ var _marquee_marquee__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./marquee/marquee */ "./src/components/online-radio/components/player/marquee/marquee.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+var Player = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(Player, _HTMLElement);
+  var _super = _createSuper(Player);
+  function Player() {
+    _classCallCheck(this, Player);
+    return _super.call(this);
+  }
+  _createClass(Player, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.innerHTML = "\n    <article class=\"player\" id=\"player\">\n      <audio src=\"https://mastermedia.shoutca.st/proxy/prviradions?mp=/stream\"></audio>\n\n      <div class=\"player-time\">\n        <button class=\"play-btn\" id=\"play-btn\"></button>\n        <div class=\"time-num\">00:00</div>\n        <button class=\"repeat-btn\"></button>\n        <button class=\"stop-btn\"></button>\n      </div>\n\n      <div class=\"player-volume\">\n        <button class=\"speaker-btn\"></button>\n        <div class=\"volume-num\">100</div>\n        <input class=\"volume-range\" type=\"range\", min=\"0\", max=\"100\" value=\"100\">\n      </div>\n\n      <marquee-component></marquee-component>\n    </article>\n    ";
+    }
+  }]);
+  return Player;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+customElements.define('player-component', Player);
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/player/js/player.js":
+/*!********************************************************************!*\
+  !*** ./src/components/online-radio/components/player/js/player.js ***!
+  \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "audio": () => (/* binding */ audio),
-/* harmony export */   "page": () => (/* binding */ page),
-/* harmony export */   "playBtn": () => (/* binding */ playBtn)
+/* harmony export */   "playBtn": () => (/* binding */ playBtn),
+/* harmony export */   "tryPlay": () => (/* binding */ tryPlay)
+/* harmony export */ });
+/* harmony import */ var _player__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_player */ "./src/components/online-radio/components/player/_player.js");
+/****************
+Скрипт из файла player.js
+*******************/
+/* Алгоритм работы
+1. Проверяем что страница имеет id="player"
+*/
+
+
+var audio = document.querySelector('audio');
+var playBtn = document.querySelector("#play-btn");
+function tryPlay() {
+  playBtn.classList.add('pause');
+  streamDisable.style.display = "none";
+  try {
+    audio.play();
+  } catch (err) {
+    audio.pause();
+    playBtn.classList.remove('pause');
+    streamDisable.style.display = "block";
+    console.log('ошибка audio play');
+  }
+}
+var streamDisable = document.getElementById("stream-disable");
+var currentPage = document.querySelector('#player');
+
+//2. Проверяем что страница имеет id="player"
+if (currentPage) {
+  /*******************
+  Кнопка Play
+  *******************/
+  var clickPlay = function clickPlay() {
+    if (audio.paused) {
+      tryPlay();
+    } else {
+      audio.pause();
+      playBtn.classList.remove('pause');
+    }
+    ;
+  };
+  var changePlayBtn = function changePlayBtn() {
+    audio.paused ? playBtn.classList.remove('pause') : playBtn.classList.add('pause');
+  };
+  /*******************
+  Кнопка Stop
+  *******************/
+  var clickStop = function clickStop() {
+    audio.pause();
+    audio.setAttribute('src', audio.src);
+  };
+  var stopPlayBtn = function stopPlayBtn() {
+    playBtn.classList.remove('pause');
+  };
+  /*******************
+  Кнопка Repeat
+  *******************/
+  var clickRepeat = function clickRepeat() {
+    audio.pause();
+    audio.currentTime = 0;
+  };
+  /*******************
+  Ошибка если поток не загрузился
+  *******************/
+  var audioError = function audioError() {
+    audio.pause();
+    changePlayBtn();
+    streamDisable.style.display = "block";
+  };
+  var timeNum = document.querySelector(".time-num");
+  var stopBtn = document.querySelector(".stop-btn");
+  var repeatBtn = document.querySelector(".repeat-btn");
+  var speakerBtn = document.querySelector(".speaker-btn");
+  var volumeNum = document.querySelector(".volume-num");
+  var volumeRange = document.querySelector(".volume-range");
+  playBtn.addEventListener('click', function () {
+    clickPlay();
+  });
+  stopBtn.addEventListener('click', function () {
+    clickStop();
+    stopPlayBtn();
+  });
+  repeatBtn.addEventListener('click', function () {
+    clickRepeat();
+    stopPlayBtn();
+  });
+  audio.addEventListener('error', audioError);
+
+  /*******************
+  Вычисление времени воспроизведения
+  *******************/
+  audio.ontimeupdate = function () {
+    var sec_num = audio.currentTime;
+    var hours = Math.floor(sec_num / 3600);
+    var minutes = Math.floor((sec_num - hours * 3600) / 60);
+    var seconds = sec_num - hours * 3600 - minutes * 60;
+    seconds = Math.round(seconds);
+    if (hours < 10) {
+      hours = "0" + hours;
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    timeNum.innerHTML = minutes + ':' + seconds;
+  };
+
+  /*******************
+  Кнопка вкл/выкл громкости
+  *******************/
+  var currentVolume = Number(volumeNum.innerHTML);
+
+  // Изменение кнопки вкл/выкл громкости
+  var changeSpeakerBtn = function changeSpeakerBtn() {
+    return speakerBtn.classList.toggle('mute');
+  };
+
+  // Клик на кнопке вкл/выкл громкости
+  var clickVolume = function clickVolume() {
+    if (volumeRange.value == 0) {
+      volumeRange.value = currentVolume;
+      audio.volume = volumeRange.value / 100;
+      volumeNum.innerHTML = volumeRange.value;
+    } else {
+      currentVolume = volumeRange.value;
+      volumeRange.value = 0;
+      audio.volume = 0;
+      volumeNum.innerHTML = volumeRange.value;
+    }
+    changeSpeakerBtn();
+  };
+
+  // Клик на кнопке вкл/выкл громкости
+  speakerBtn.addEventListener('click', clickVolume);
+
+  /*******************
+  Изменение регулятора громкости
+  *******************/
+  var changeVolume = function changeVolume() {
+    audio.volume = volumeRange.value / 100;
+    volumeNum.innerHTML = volumeRange.value;
+    if (volumeRange.value == 0 && !speakerBtn.classList.contains('mute')) {
+      speakerBtn.classList.add('mute');
+    }
+    if (volumeRange.value != 0 && speakerBtn.classList.contains('mute')) {
+      speakerBtn.classList.remove('mute');
+    }
+  };
+
+  // Изменение регулятора громкости
+  volumeRange.addEventListener('change', changeVolume);
+}
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/player/marquee/marquee.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/online-radio/components/player/marquee/marquee.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _marquee_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_marquee.scss */ "./src/components/online-radio/components/player/marquee/_marquee.scss");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var Marquee = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(Marquee, _HTMLElement);
+  var _super = _createSuper(Marquee);
+  function Marquee() {
+    _classCallCheck(this, Marquee);
+    return _super.call(this);
+  }
+  _createClass(Marquee, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.innerHTML = "\n    <div class=\"marquee\" id=\"stream-disable\">\n      <span>stream disable at the moment</span>\n    </div>\n    ";
+    }
+  }]);
+  return Marquee;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+customElements.define('marquee-component', Marquee);
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/select/element-select-country.js":
+/*!*********************************************************************************!*\
+  !*** ./src/components/online-radio/components/select/element-select-country.js ***!
+  \*********************************************************************************/
+/***/ (() => {
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+var SelectCountry = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(SelectCountry, _HTMLElement);
+  var _super = _createSuper(SelectCountry);
+  function SelectCountry() {
+    _classCallCheck(this, SelectCountry);
+    return _super.call(this);
+  }
+  _createClass(SelectCountry, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.innerHTML = "\n    <aside class=\"select-country\">\n      <h3 class=\"country-title\">Country</h3>\n      <div class=\"content__menu\">\n        <div class=\"content__menu-link\" id=\"content__menu-link1\">\u0420\u043E\u0441\u0441\u0438\u044F</div>\n        <div class=\"content__menu-link\" id=\"content__menu-link2\">\u0411\u0435\u043B\u0430\u0440\u0443\u0441\u044C</div>\n        <div class=\"content__menu-link\" id=\"content__menu-link3\">Srbija</div>\n        <div class=\"content__menu-link\" id=\"content__menu-link4\">Hrvatska</div>\n        <div class=\"content__menu-link\" id=\"content__menu-link5\">BiH</div>\n        <div class=\"content__menu-link\" id=\"content__menu-link6\">India</div>\n      </div>\n    </aside>\n    ";
+    }
+  }]);
+  return SelectCountry;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+customElements.define('select-country', SelectCountry);
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/select/element-select-radio.js":
+/*!*******************************************************************************!*\
+  !*** ./src/components/online-radio/components/select/element-select-radio.js ***!
+  \*******************************************************************************/
+/***/ (() => {
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+var SelectRadio = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(SelectRadio, _HTMLElement);
+  var _super = _createSuper(SelectRadio);
+  function SelectRadio() {
+    _classCallCheck(this, SelectRadio);
+    return _super.call(this);
+  }
+  _createClass(SelectRadio, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.innerHTML = "\n    <main class=\"select-radio\">\n      <div class=\"content__items\">\n        <div class=\"content__item\" id=\"content__item1\">\n          <h3 class=\"country-title\">\u0420\u043E\u0441\u0441\u0438\u044F</h3>\n        </div>\n        <div class=\"content__item\" id=\"content__item2\">\n          <h3 class=\"country-title\">\u0411\u0435\u043B\u0430\u0440\u0443\u0441\u044C</h3>\n        </div>\n        <div class=\"content__item\" id=\"content__item3\">\n          <h3 class=\"country-title\">Srbija</h3>\n        </div>\n        <div class=\"content__item\" id=\"content__item4\">\n          <h3 class=\"country-title\">Hrvatska</h3>\n        </div>\n        <div class=\"content__item\" id=\"content__item5\">\n          <h3 class=\"country-title\">BiH</h3>\n        </div>\n        <div class=\"content__item\" id=\"content__item6\">\n          <h3 class=\"country-title\">India</h3>\n        </div>\n      </div>\n    </main>\n    ";
+    }
+  }]);
+  return SelectRadio;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+customElements.define('select-radio', SelectRadio);
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/select/select.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/online-radio/components/select/select.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _select_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select.scss */ "./src/components/online-radio/components/select/select.scss");
+/* harmony import */ var _element_select_country__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./element-select-country */ "./src/components/online-radio/components/select/element-select-country.js");
+/* harmony import */ var _element_select_country__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_element_select_country__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _element_select_radio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./element-select-radio */ "./src/components/online-radio/components/select/element-select-radio.js");
+/* harmony import */ var _element_select_radio__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_element_select_radio__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+/***/ }),
+
+/***/ "./src/components/online-radio/js/const.js":
+/*!*************************************************!*\
+  !*** ./src/components/online-radio/js/const.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "page": () => (/* binding */ page)
 /* harmony export */ });
 /****************
 Скрипт из файла const.js
 *******************/
 
 var page = document.querySelector('#page');
-var audio = document.querySelector('audio');
-var playBtn = document.querySelector(".play-btn");
 
 /***/ }),
 
-/***/ "./src/js/create-stations-list.js":
-/*!****************************************!*\
-  !*** ./src/js/create-stations-list.js ***!
-  \****************************************/
+/***/ "./src/components/online-radio/js/create-stations-list.js":
+/*!****************************************************************!*\
+  !*** ./src/components/online-radio/js/create-stations-list.js ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -284,7 +771,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "createStationsList": () => (/* binding */ createStationsList)
 /* harmony export */ });
-/* harmony import */ var _set_radio_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./set-radio.js */ "./src/js/set-radio.js");
+/* harmony import */ var _set_radio_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./set-radio.js */ "./src/components/online-radio/js/set-radio.js");
 /*****************
 Функция createStationsList создает список радиостанций на странице
 *****************/
@@ -309,218 +796,10 @@ function createStationsList(data, elem) {
 
 /***/ }),
 
-/***/ "./src/js/order.js":
-/*!*************************!*\
-  !*** ./src/js/order.js ***!
-  \*************************/
-/***/ (() => {
-
-/****************
-Скрипт из файла order.js написан для
-main.content
-По нажатию на пункт меню в секции content
-Переносит содержимое этого пункта наверх
-*******************/
-
-/*Основная функция убирает class order -1 у старого элемента и добавляет новому*/
-function addOrder(item) {
-  old.classList.remove('content__order');
-  item.classList.add('content__order');
-  old = item;
-}
-/*конец Основная функция убирает class order -1 у старого элемента и добавляет новому*/
-
-/***************************
-Выбираем ссылки для основного контента и вешаем обработчик событий
-***************************/
-var menu_links = document.querySelectorAll('.content__menu-link');
-var content_items = document.querySelectorAll('.content__item');
-
-/*если ссылки для основного контента есть*/
-if (menu_links[0]) {
-  var old = menu_links[0]; // первая ссылка должна быть наверху
-  var _loop = function _loop(i) {
-    menu_links[i].addEventListener('click', function () {
-      return addOrder(content_items[i]);
-    });
-  };
-  for (var i = 0; i < menu_links.length; i++) {
-    _loop(i);
-  }
-}
-/*конец Выбираем ссылки для основного контента и вешаем обработчик событий*/
-
-/***/ }),
-
-/***/ "./src/js/radio.js":
-/*!*************************!*\
-  !*** ./src/js/radio.js ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _static_data_stations_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../static/data-stations.js */ "./src/static/data-stations.js");
-/* harmony import */ var _static_data_stations1_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../static/data-stations1.js */ "./src/static/data-stations1.js");
-/* harmony import */ var _create_stations_list_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./create-stations-list.js */ "./src/js/create-stations-list.js");
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-/****************
-Скрипт из файла radio.js
-*******************/
-
-/* Алгоритм работы
-1. Получаем массив из файла data-stations.js
-2. Создаем объекты (наследуем от класса Stations)
-*/
-
-
-
-
-
-/*Создадим переменные для DOM элементов*/
-var rusStanice = document.querySelector('#content__item1');
-var belStanice = document.querySelector('#content__item2');
-var srbStanice = document.querySelector('#content__item3');
-var hrvStanice = document.querySelector('#content__item4');
-var bihStanice = document.querySelector('#content__item5');
-var indStanice = document.querySelector('#content__item6');
-var srbStanice1 = document.querySelector('#content__item7');
-var hrvStanice1 = document.querySelector('#content__item8');
-var bihStanice1 = document.querySelector('#content__item9');
-
-/*Создадим переменную для папки где лежат картинки*/
-var logoPath = 'static/img/radio/';
-/*Создадим переменную для https адреса http потока*/
-var httpToHttps = 'https://cors.bitwize.com.lb/';
-
-/*Создадим класс для объектов для радиостанций*/
-var Station = /*#__PURE__*/_createClass(function Station(title, country, stream, logo, site) {
-  _classCallCheck(this, Station);
-  this.title = title;
-  this.country = country;
-  this.stream = stream;
-  this.logo = logoPath + logo;
-  this.site = site;
-});
-/*В файле data-stations.js радиостанции https*/
-var dataRussia = [];
-var dataBelarus = [];
-var dataSrbija = [];
-var dataHrvatska = [];
-var dataBiH = [];
-var dataInd = [];
-var stations = [];
-var s = _static_data_stations_js__WEBPACK_IMPORTED_MODULE_0__.dataStations;
-
-//Для каждого объекта из массива stations создаем станцию
-for (var i = 0; i < s.length; i++) {
-  stations[i] = new Station(s[i].title, s[i].country, s[i].stream, s[i].logo, s[i].site);
-}
-
-//Каждую станцию кладем в массив в зависимости от страны
-for (var _i = 0; _i < stations.length; _i++) {
-  switch (stations[_i].country) {
-    case 'Russia':
-      dataRussia.push(stations[_i]);
-      break;
-    case 'Belarus':
-      dataBelarus.push(stations[_i]);
-      break;
-    case 'Srbija':
-      dataSrbija.push(stations[_i]);
-      break;
-    case 'Hrvatska':
-      dataHrvatska.push(stations[_i]);
-      break;
-    case 'BiH':
-      dataBiH.push(stations[_i]);
-      break;
-    case 'India':
-      dataInd.push(stations[_i]);
-      break;
-  }
-}
-
-/*В файле data-stations1.js радиостанции http*/
-var stations1 = [];
-var dataStations1 = [];
-stations1 = _static_data_stations1_js__WEBPACK_IMPORTED_MODULE_1__.dataStationss1;
-
-//Для каждого элемента из json1 создаем станцию
-for (var _i2 = 0; _i2 < stations1.length; _i2++) {
-  dataStations1[_i2] = new Station(stations1[_i2].title, stations1[_i2].country, httpToHttps + stations1[_i2].stream, stations1[_i2].logo, stations1[_i2].site);
-}
-
-//Каждую станцию кладем в массив в зависимости от страны
-for (var _i3 = 0; _i3 < dataStations1.length; _i3++) {
-  switch (dataStations1[_i3].country) {
-    case 'Srbija':
-      dataSrbija.push(dataStations1[_i3]);
-      break;
-    case 'Hrvatska':
-      dataHrvatska.push(dataStations1[_i3]);
-      break;
-    case 'BiH':
-      dataBiH.push(dataStations1[_i3]);
-      break;
-  }
-}
-(0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_2__.createStationsList)(dataRussia, rusStanice);
-(0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_2__.createStationsList)(dataBelarus, belStanice);
-(0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_2__.createStationsList)(dataSrbija, srbStanice);
-(0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_2__.createStationsList)(dataHrvatska, hrvStanice);
-(0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_2__.createStationsList)(dataBiH, bihStanice);
-(0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_2__.createStationsList)(dataInd, indStanice);
-
-// Список русских станций https://e-radio.ru/
-// Список беларуских станций https://www.tvr.by/radio/
-
-/***/ }),
-
-/***/ "./src/js/set-radio.js":
-/*!*****************************!*\
-  !*** ./src/js/set-radio.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "setRadio": () => (/* binding */ setRadio)
-/* harmony export */ });
-/* harmony import */ var _const_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./const.js */ "./src/js/const.js");
-/* harmony import */ var _components_player_player_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../components/player/player.js */ "./src/components/player/player.js");
-/*****************
-Функция setRadio записывает данные в плеер
-*****************/
-
-
-
-var radioLogo = document.getElementById('radio__logo');
-var radioSite = document.getElementById('radio__site');
-var radioTitle = document.getElementById('radio__title');
-var radioCountry = document.getElementById('radio__country');
-function setRadio(station) {
-  _const_js__WEBPACK_IMPORTED_MODULE_0__.audio.setAttribute('src', station.stream);
-  radioLogo.setAttribute('src', station.logo);
-  radioSite.href = station.site;
-  radioSite.title = station.site;
-  radioTitle.innerHTML = station.title;
-  radioCountry.innerHTML = station.country;
-  (0,_components_player_player_js__WEBPACK_IMPORTED_MODULE_1__.tryPlay)();
-}
-
-/***/ }),
-
-/***/ "./src/static/data-stations.js":
-/*!*************************************!*\
-  !*** ./src/static/data-stations.js ***!
-  \*************************************/
+/***/ "./src/components/online-radio/js/data/data-stations.js":
+/*!**************************************************************!*\
+  !*** ./src/components/online-radio/js/data/data-stations.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -814,10 +1093,10 @@ var dataStations = [{
 
 /***/ }),
 
-/***/ "./src/static/data-stations1.js":
-/*!**************************************!*\
-  !*** ./src/static/data-stations1.js ***!
-  \**************************************/
+/***/ "./src/components/online-radio/js/data/data-stations1.js":
+/*!***************************************************************!*\
+  !*** ./src/components/online-radio/js/data/data-stations1.js ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -925,6 +1204,428 @@ var dataStationss1 = [{
 
 /***/ }),
 
+/***/ "./src/components/online-radio/js/element-online-radio.js":
+/*!****************************************************************!*\
+  !*** ./src/components/online-radio/js/element-online-radio.js ***!
+  \****************************************************************/
+/***/ (() => {
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+var OnlineRadio = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(OnlineRadio, _HTMLElement);
+  var _super = _createSuper(OnlineRadio);
+  function OnlineRadio() {
+    _classCallCheck(this, OnlineRadio);
+    return _super.call(this);
+  }
+  _createClass(OnlineRadio, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.innerHTML = "\n    <div class=\"online-radio\" id=\"online-radio\">\n      <h1>Online Radio</h1>\n      <player-component></player-component>\n      <listen-radio></listen-radio>\n      <section class=\"select\">\n        <select-country></select-country>\n        <select-radio></select-radio>\n      </select>\n    </div>\n    ";
+    }
+  }]);
+  return OnlineRadio;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+customElements.define('online-radio', OnlineRadio);
+
+/***/ }),
+
+/***/ "./src/components/online-radio/js/order.js":
+/*!*************************************************!*\
+  !*** ./src/components/online-radio/js/order.js ***!
+  \*************************************************/
+/***/ (() => {
+
+/****************
+Скрипт из файла order.js написан для
+main.content
+По нажатию на пункт меню в секции content
+Переносит содержимое этого пункта наверх
+*******************/
+
+/*Основная функция убирает class order -1 у старого элемента и добавляет новому*/
+function addOrder(item) {
+  old.classList.remove('content__order');
+  item.classList.add('content__order');
+  old = item;
+}
+/*конец Основная функция убирает class order -1 у старого элемента и добавляет новому*/
+
+/***************************
+Выбираем ссылки для основного контента и вешаем обработчик событий
+***************************/
+var menu_links = document.querySelectorAll('.content__menu-link');
+var content_items = document.querySelectorAll('.content__item');
+
+/*если ссылки для основного контента есть*/
+if (menu_links[0]) {
+  var old = menu_links[0]; // первая ссылка должна быть наверху
+  var _loop = function _loop(i) {
+    menu_links[i].addEventListener('click', function () {
+      return addOrder(content_items[i]);
+    });
+  };
+  for (var i = 0; i < menu_links.length; i++) {
+    _loop(i);
+  }
+}
+/*конец Выбираем ссылки для основного контента и вешаем обработчик событий*/
+
+/***/ }),
+
+/***/ "./src/components/online-radio/js/radio.js":
+/*!*************************************************!*\
+  !*** ./src/components/online-radio/js/radio.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "showStations": () => (/* binding */ showStations)
+/* harmony export */ });
+/* harmony import */ var _components_listen_radio_listen_radio__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../components/listen-radio/listen-radio */ "./src/components/online-radio/components/listen-radio/listen-radio.js");
+/* harmony import */ var _components_select_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../components/select/select */ "./src/components/online-radio/components/select/select.js");
+/* harmony import */ var _components_player_js_player__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../components/player/js/player */ "./src/components/online-radio/components/player/js/player.js");
+/* harmony import */ var _order__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./order */ "./src/components/online-radio/js/order.js");
+/* harmony import */ var _order__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_order__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _data_data_stations_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data/data-stations.js */ "./src/components/online-radio/js/data/data-stations.js");
+/* harmony import */ var _data_data_stations1_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./data/data-stations1.js */ "./src/components/online-radio/js/data/data-stations1.js");
+/* harmony import */ var _create_stations_list_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./create-stations-list.js */ "./src/components/online-radio/js/create-stations-list.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+/*********************
+Скрипт из файла radio.js
+*********************/
+
+/* Алгоритм работы
+1. Получаем массив из файла data-stations.js
+2. Создадим переменную для папки где лежат картинки
+3. Создадим переменную для https адреса http потока
+4. Создадим класс для объектов для радиостанций
+5. Для радиостанций https
+  5.1 Создаем объекты (наследуем от класса Stations)
+  5.2 Каждую станцию кладем в массив в зависимости от страны
+6. Для радиостанций http
+  6.1 Создаем объекты (наследуем от класса Stations)
+  6.2 Каждую станцию кладем в массив в зависимости от страны
+7. Экспорт функции swowStations, которая показывает список радиостанций
+*/
+
+
+
+
+
+
+//1. Получаем массив из файла data-stations.js
+
+
+
+
+//2. Создадим переменную для папки где лежат картинки
+var logoPath = 'static/img/radio/';
+//3. Создадим переменную для https адреса http потока
+var httpToHttps = 'https://cors.bitwize.com.lb/';
+
+//4. Создадим класс для объектов для радиостанций
+var Station = /*#__PURE__*/_createClass(function Station(title, country, stream, logo, site) {
+  _classCallCheck(this, Station);
+  this.title = title;
+  this.country = country;
+  this.stream = stream;
+  this.logo = logoPath + logo;
+  this.site = site;
+});
+var dataRussia = [];
+var dataBelarus = [];
+var dataSrbija = [];
+var dataHrvatska = [];
+var dataBiH = [];
+var dataInd = [];
+
+//5. Для радиостанций https
+/*В файле data-stations.js радиостанции https*/
+var stations = [];
+var s = _data_data_stations_js__WEBPACK_IMPORTED_MODULE_4__.dataStations;
+
+//5.1 Создаем объекты (наследуем от класса Stations)
+for (var i = 0; i < s.length; i++) {
+  stations[i] = new Station(s[i].title, s[i].country, s[i].stream, s[i].logo, s[i].site);
+}
+
+//5.2 Каждую станцию кладем в массив в зависимости от страны
+for (var _i = 0; _i < stations.length; _i++) {
+  switch (stations[_i].country) {
+    case 'Russia':
+      dataRussia.push(stations[_i]);
+      break;
+    case 'Belarus':
+      dataBelarus.push(stations[_i]);
+      break;
+    case 'Srbija':
+      dataSrbija.push(stations[_i]);
+      break;
+    case 'Hrvatska':
+      dataHrvatska.push(stations[_i]);
+      break;
+    case 'BiH':
+      dataBiH.push(stations[_i]);
+      break;
+    case 'India':
+      dataInd.push(stations[_i]);
+      break;
+  }
+}
+
+//6. Для радиостанций http
+/*В файле data-stations1.js радиостанции http*/
+var stations1 = [];
+var dataStations1 = [];
+stations1 = _data_data_stations1_js__WEBPACK_IMPORTED_MODULE_5__.dataStationss1;
+
+//6.1 Создаем объекты (наследуем от класса Stations)
+for (var _i2 = 0; _i2 < stations1.length; _i2++) {
+  dataStations1[_i2] = new Station(stations1[_i2].title, stations1[_i2].country, httpToHttps + stations1[_i2].stream, stations1[_i2].logo, stations1[_i2].site);
+}
+
+//6.2 Каждую станцию кладем в массив в зависимости от страны
+for (var _i3 = 0; _i3 < dataStations1.length; _i3++) {
+  switch (dataStations1[_i3].country) {
+    case 'Srbija':
+      dataSrbija.push(dataStations1[_i3]);
+      break;
+    case 'Hrvatska':
+      dataHrvatska.push(dataStations1[_i3]);
+      break;
+    case 'BiH':
+      dataBiH.push(dataStations1[_i3]);
+      break;
+  }
+}
+
+//7. Экспорт функции swowStations, которая показывает список радиостанций
+function showStations() {
+  var rusStanice = document.querySelector('#content__item1');
+  var belStanice = document.querySelector('#content__item2');
+  var srbStanice = document.querySelector('#content__item3');
+  var hrvStanice = document.querySelector('#content__item4');
+  var bihStanice = document.querySelector('#content__item5');
+  var indStanice = document.querySelector('#content__item6');
+  (0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_6__.createStationsList)(dataRussia, rusStanice);
+  (0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_6__.createStationsList)(dataBelarus, belStanice);
+  (0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_6__.createStationsList)(dataSrbija, srbStanice);
+  (0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_6__.createStationsList)(dataHrvatska, hrvStanice);
+  (0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_6__.createStationsList)(dataBiH, bihStanice);
+  (0,_create_stations_list_js__WEBPACK_IMPORTED_MODULE_6__.createStationsList)(dataInd, indStanice);
+}
+/*Создадим переменные для DOM элементов*/
+
+// Список русских станций https://e-radio.ru/
+// Список беларуских станций https://www.tvr.by/radio/
+
+/***/ }),
+
+/***/ "./src/components/online-radio/js/set-radio.js":
+/*!*****************************************************!*\
+  !*** ./src/components/online-radio/js/set-radio.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "setRadio": () => (/* binding */ setRadio)
+/* harmony export */ });
+/* harmony import */ var _components_player_js_player_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../components/player/js/player.js */ "./src/components/online-radio/components/player/js/player.js");
+/*****************
+Функция setRadio записывает данные в плеер
+*****************/
+
+
+var radioLogo = document.getElementById('radio__logo');
+var radioSite = document.getElementById('radio__site');
+var radioTitle = document.getElementById('radio__title');
+var radioCountry = document.getElementById('radio__country');
+function setRadio(station) {
+  _components_player_js_player_js__WEBPACK_IMPORTED_MODULE_0__.audio.setAttribute('src', station.stream);
+  radioLogo.setAttribute('src', station.logo);
+  radioSite.href = station.site;
+  radioSite.title = station.site;
+  radioTitle.innerHTML = station.title;
+  radioCountry.innerHTML = station.country;
+  (0,_components_player_js_player_js__WEBPACK_IMPORTED_MODULE_0__.tryPlay)();
+}
+
+/***/ }),
+
+/***/ "./src/components/online-radio/online-radio.js":
+/*!*****************************************************!*\
+  !*** ./src/components/online-radio/online-radio.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _online_radio_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./online-radio.scss */ "./src/components/online-radio/online-radio.scss");
+/* harmony import */ var _js_element_online_radio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/element-online-radio */ "./src/components/online-radio/js/element-online-radio.js");
+/* harmony import */ var _js_element_online_radio__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_element_online_radio__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _js_radio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/radio */ "./src/components/online-radio/js/radio.js");
+
+
+
+(0,_js_radio__WEBPACK_IMPORTED_MODULE_2__.showStations)();
+
+/***/ }),
+
+/***/ "./src/components/footer/footer.scss":
+/*!*******************************************!*\
+  !*** ./src/components/footer/footer.scss ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/components/header/header.scss":
+/*!*******************************************!*\
+  !*** ./src/components/header/header.scss ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/components/header/snow/_snow.scss":
+/*!***********************************************!*\
+  !*** ./src/components/header/snow/_snow.scss ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/components/header/social-icons/_social-icons.scss":
+/*!***************************************************************!*\
+  !*** ./src/components/header/social-icons/_social-icons.scss ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/components/header/theme/_theme.scss":
+/*!*************************************************!*\
+  !*** ./src/components/header/theme/_theme.scss ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/listen-radio/listen-radio.scss":
+/*!*******************************************************************************!*\
+  !*** ./src/components/online-radio/components/listen-radio/listen-radio.scss ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/player/_player.scss":
+/*!********************************************************************!*\
+  !*** ./src/components/online-radio/components/player/_player.scss ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/player/marquee/_marquee.scss":
+/*!*****************************************************************************!*\
+  !*** ./src/components/online-radio/components/player/marquee/_marquee.scss ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/components/online-radio/components/select/select.scss":
+/*!*******************************************************************!*\
+  !*** ./src/components/online-radio/components/select/select.scss ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/components/online-radio/online-radio.scss":
+/*!*******************************************************!*\
+  !*** ./src/components/online-radio/online-radio.scss ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/style.scss":
 /*!************************!*\
   !*** ./src/style.scss ***!
@@ -1015,19 +1716,13 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
-/* harmony import */ var _js_order__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/order */ "./src/js/order.js");
-/* harmony import */ var _js_order__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_order__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _js_radio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/radio */ "./src/js/radio.js");
-/* harmony import */ var _components_theme_theme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/theme/theme */ "./src/components/theme/theme.js");
-/* harmony import */ var _components_snow_snow__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/snow/snow */ "./src/components/snow/snow.js");
-/* harmony import */ var _components_player_player__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/player/player */ "./src/components/player/player.js");
+/* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/header/header */ "./src/components/header/header.js");
+/* harmony import */ var _components_footer_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/footer/footer */ "./src/components/footer/footer.js");
+/* harmony import */ var _components_online_radio_online_radio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/online-radio/online-radio */ "./src/components/online-radio/online-radio.js");
 
 
 
 
-
-
-console.log('Radio start');
 })();
 
 /******/ })()

@@ -1,48 +1,62 @@
-/*!***************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
-  \***************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
+  \******************************************************************************************************************************************************/
 @charset "UTF-8";
-/***********
-_global.scss
-***********/
+/*********************
+Global
+*********************/
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  /* псевдокласс выделения */
+  color: #fff;
+  background-color: #2B7DED;
+}
+
+::selection {
+  /* псевдокласс выделения */
+  color: #fff;
+  background-color: #2B7DED;
 }
 
 html {
   font-size: 16px;
-  /* 1rem */
+  /* 1rem размер шрифта */
+  font-family: Arial, sans-serif;
 }
 
-/***********
-_page.scss
-***********/
+@media (min-width: 1400px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 580px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+/* Конец Global */
+/*********************
+Page
+*********************/
 .page {
-  --bg: #87ceeb;
-  --bor: #00aced;
-  --bg-dark1: #222;
-  --txt-dark1: #f4f4f4;
-  --bg-dark2: #373737;
-  --txt-dark2: #f4f4f4;
-  --bg-light1: #f4f4f4;
-  --txt-light1: #111;
-  --bg-light2: #4a76a8;
-  --txt-light2: #f4f4f4;
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
   color: var(--txt-light1);
   background-color: var(--bg);
   -webkit-transition: color 2s, background-color 2s;
   transition: color 2s, background-color 2s;
 }
 
-@media (max-width: 576px) {
-  .page {
-    font-size: 0.8rem;
-  }
-}
 .container {
   margin: 0 auto;
   width: 90%;
@@ -57,6 +71,18 @@ h1 {
   text-align: center;
 }
 
+.none {
+  display: none;
+}
+
+/* Конец Page */
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/header/header.scss ***!
+  \*************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/*********************
+header__first-row
+*********************/
 .header__first-row {
   text-align: center;
 }
@@ -65,13 +91,27 @@ h1 {
   max-width: 90%;
 }
 
+/* Конец header__first-row */
+/*********************
+header__second-row
+*********************/
 .header__second-row {
   text-align: center;
 }
 
-/***********
-_social.scss
-***********/
+.settings {
+  padding: 5px;
+  text-align: center;
+}
+
+/* header__second-row */
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/header/social-icons/_social-icons.scss ***!
+  \*********************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/*********************
+_social-icons.scss
+*********************/
 .social__icon {
   width: 24px;
   height: 24px;
@@ -139,38 +179,55 @@ _social.scss
   background-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M20 7.539a6.56 6.56 0 01-1.885.517 3.294 3.294 0 001.443-1.816 6.575 6.575 0 01-2.085.796 3.283 3.283 0 00-5.593 2.994A9.32 9.32 0 015.114 6.6a3.28 3.28 0 001.016 4.382 3.274 3.274 0 01-1.487-.41v.041a3.285 3.285 0 002.633 3.218 3.305 3.305 0 01-1.482.056 3.286 3.286 0 003.066 2.28A6.585 6.585 0 014 17.524 9.291 9.291 0 009.032 19c6.038 0 9.34-5 9.34-9.337 0-.143-.004-.285-.01-.425A6.672 6.672 0 0020 7.538z%27 fill=%27%23FFF%27 fill-rule=%27evenodd%27/%3E%3C/svg%3E");
 }
 
-/***********
-_theme.scss
-***********/
-.theme {
+/* Конец _social-icons.scss */
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/header/theme/_theme.scss ***!
+  \*******************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/*********************
+Theme
+*********************/
+theme-btn {
   display: inline-block;
-  margin: 5px 0;
+}
+
+.theme_btn {
   width: 30px;
   height: 30px;
-  border-radius: 10px;
   cursor: pointer;
   background-image: url(assets/day_and_night.svg);
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.dark-theme,
-.content__menu-link.dark-theme {
+.dark-theme {
   color: var(--txt-dark1);
   border-color: var(--txt-dark1);
   background-color: var(--bg-dark1);
 }
 
+/* Конец Theme */
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/header/snow/_snow.scss ***!
+  \*****************************************************************************************************************************************************************************/
 /***********
 _snow.scss
 ***********/
-.setSnow {
+snow-btn {
   display: inline-block;
-  margin: 5px 0;
+}
+
+.snow_btn {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background-image: url(assets/snowflake_icon.svg);
+  background-image: url(assets/snowflake_black.svg);
   background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.dark-theme .snow_btn {
+  background-image: url(assets/snowflake_white.svg);
 }
 
 @-webkit-keyframes snow {
@@ -196,51 +253,196 @@ _snow.scss
   -webkit-animation: snow 20s linear infinite;
           animation: snow 20s linear infinite;
 }
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/footer/footer.scss ***!
+  \*************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/*********************
+Footer
+*********************/
+.footer {
+  padding: 10px;
+  width: 500px;
+}
+.footer .footer-title {
+  padding: 10px;
+  font-family: monospace;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: center;
+  border: 5px solid var(--bor);
+  border-radius: 20px;
+}
+.footer .footer a {
+  text-decoration: none;
+  color: blue;
+}
 
+@media (max-width: 576px) {
+  .footer {
+    padding: 0;
+    width: 350px;
+  }
+  .footer .footer-title {
+    padding: 0;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-size: 1rem;
+  }
+}
+/* Конец Footer */
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/online-radio/online-radio.scss ***!
+  \*************************************************************************************************************************************************************************************/
+.page {
+  --bg: #87ceeb;
+  --bor: #00aced;
+  --bg-dark1: #222;
+  --txt-dark1: #f4f4f4;
+  --bg-dark2: #373737;
+  --txt-dark2: #f4f4f4;
+  --bg-light1: #f4f4f4;
+  --txt-light1: #111;
+  --bg-light2: #4a76a8;
+  --txt-light2: #f4f4f4;
+}
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/online-radio/components/listen-radio/listen-radio.scss ***!
+  \*************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/*********************
+listen-radio
+*********************/
+.listen-radio {
+  margin: 10px auto;
+  padding: 20px;
+  width: 500px;
+  text-align: center;
+  border: 5px solid var(--bor);
+  border-radius: 20px;
+}
+
+@media (max-width: 576px) {
+  .listen-radio {
+    width: 350px;
+    border: 2px solid var(--bor);
+  }
+}
+.radio__logo {
+  margin-right: 10px;
+  height: 60px;
+}
+
+.radio__description {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Конец listen-radio */
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/online-radio/components/select/select.scss ***!
+  \*************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/***********
+_select.scss
+***********/
+.select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 500px;
+  border: 5px solid var(--bor);
+  border-radius: 10px;
+  /*задается в js*/
+}
+.select h3 {
+  background: none;
+}
+.select .content__menu {
+  width: 120px;
+}
+.select .content__menu-link {
+  margin: 10px;
+  padding: 5px;
+  border: 5px solid var(--bor);
+  border-radius: 10px;
+  cursor: pointer;
+  background: none;
+}
+.select .content__menu-link:hover {
+  background-color: var(--bg-light2);
+}
+.select .content__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+}
+.select .country-title {
+  text-align: center;
+}
+.select .stanica {
+  margin: 10px;
+  padding: 10px;
+  border: 5px solid var(--bor);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.select .stanica:hover {
+  background-color: var(--bg-light2);
+}
+.select .up {
+  text-align: center;
+}
+.select .content__order {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+@media (max-width: 576px) {
+  .select {
+    width: 350px;
+    border: 2px solid var(--bor);
+  }
+  .select .content__menu {
+    width: 100px;
+  }
+  .select .content__menu-link {
+    margin: 10px 5px;
+    border: 2px solid var(--bor);
+  }
+  .select .content__items {
+    width: 240px;
+  }
+  .select .stanica {
+    margin: 10px 5px;
+    border: 2px solid var(--bor);
+  }
+}
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/online-radio/components/player/_player.scss ***!
+  \**************************************************************************************************************************************************************************************************/
 /***********
 _player.scss
 ***********/
-#stream-disable {
-  display: none;
-}
-
-@-webkit-keyframes scroll {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-}
-
-@keyframes scroll {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-}
-.marquee {
-  display: block;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.marquee span {
-  display: inline-block;
-  padding-left: 100%;
-  -webkit-animation: scroll 10s infinite linear;
-          animation: scroll 10s infinite linear;
-  font-size: 1rem;
-  color: red;
-}
-
 .player {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -399,177 +601,51 @@ PLAYER VOLUME
 .volume-range {
   width: 150px;
 }
-
-.listen-radio {
-  margin: 10px auto;
-  padding: 20px;
-  width: 500px;
-  text-align: center;
-  border: 5px solid var(--bor);
-  border-radius: 20px;
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/online-radio/components/player/marquee/_marquee.scss ***!
+  \***********************************************************************************************************************************************************************************************************/
+/***********
+_marquee.scss
+***********/
+#stream-disable {
+  display: none;
 }
 
-@media (max-width: 576px) {
-  .listen-radio {
-    width: 350px;
-    border: 2px solid var(--bor);
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
   }
 }
-.radio__logo {
-  margin-right: 10px;
-  height: 60px;
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
+.marquee {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.radio__description {
+.marquee span {
   display: inline-block;
-  vertical-align: top;
-}
-
-/***********
-_main.scss
-***********/
-.select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  margin: 0 auto;
-  padding: 10px 0;
-  width: 500px;
-  border: 5px solid var(--bor);
-  border-radius: 10px;
-}
-
-@media (max-width: 576px) {
-  .select {
-    width: 350px;
-    border: 2px solid var(--bor);
-  }
-}
-/***********
-select country
-***********/
-.content__menu {
-  width: 120px;
-}
-
-@media (max-width: 576px) {
-  .content__menu {
-    width: 100px;
-  }
-}
-.content__menu-link {
-  margin: 10px;
-  padding: 10px;
-  border: 5px solid var(--bor);
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-@media (max-width: 576px) {
-  .content__menu-link {
-    margin: 10px 5px;
-    border: 2px solid var(--bor);
-  }
-}
-.content__menu-link:hover {
-  background-color: var(--bg-light2);
-}
-
-/***********
-select radio
-***********/
-.content__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 350px;
-}
-
-@media (max-width: 576px) {
-  .content__items {
-    width: 240px;
-  }
-}
-.country-title {
-  text-align: center;
-}
-
-.stanica {
-  margin: 10px;
-  padding: 10px;
-  border: 5px solid var(--bor);
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-@media (max-width: 576px) {
-  .stanica {
-    margin: 10px 5px;
-    border: 2px solid var(--bor);
-  }
-}
-.stanica:hover {
-  background-color: var(--bg-light2);
-}
-
-.up {
-  text-align: center;
-}
-
-/*задается в js*/
-.content__order {
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-}
-
-.footer {
-  padding: 10px;
-  width: 500px;
-}
-
-@media (max-width: 576px) {
-  .footer {
-    padding: 0;
-    width: 350px;
-  }
-}
-.footer-title {
-  padding: 10px;
-  font-family: monospace;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  text-align: center;
-  border: 5px solid var(--bor);
-  border-radius: 20px;
-}
-
-@media (max-width: 576px) {
-  .footer-title {
-    padding: 0;
-    border: none;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    font-size: 1rem;
-  }
-}
-.footer a {
-  text-decoration: none;
-  color: blue;
+  padding-left: 100%;
+  -webkit-animation: scroll 10s infinite linear;
+          animation: scroll 10s infinite linear;
+  font-size: 1rem;
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map*/
